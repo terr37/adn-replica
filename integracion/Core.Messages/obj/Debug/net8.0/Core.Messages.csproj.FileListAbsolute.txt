@@ -1,0 +1,12 @@
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\bin\Debug\net8.0\Core.Messages.deps.json
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\bin\Debug\net8.0\Core.Messages.dll
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\bin\Debug\net8.0\Core.Messages.pdb
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.csproj.AssemblyReference.cache
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.AssemblyInfoInputs.cache
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.AssemblyInfo.cs
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.csproj.CoreCompileInputs.cache
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.dll
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\refint\Core.Messages.dll
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\Core.Messages.pdb
+C:\Users\jean1\Downloads\NServiceBusIntegration (2)\NServiceBusIntegration\Core.Messages\obj\Debug\net8.0\ref\Core.Messages.dll

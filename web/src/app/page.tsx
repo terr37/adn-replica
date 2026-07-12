@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { HeroSection } from '../core/components/HeroSection';
 import { TaxCard } from '../features/catalog/presentation/components/TaxCard';
 import { useGetCatalog } from '../features/catalog/presentation/hooks/useGetCatalog';
-import { PaymentTable } from '../features/payments/presentation/components/PaymentTable';
 import { useGetIncidences } from '../features/incidences/presentation/hooks/useGetIncidences';
 import { ArrowRight, Users, ChevronRight, Building2, Recycle, Trees, TreeDeciduousIcon } from 'lucide-react';
 import { ScrollReveal } from '../core/components/ScrollReveal';
@@ -141,15 +140,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* Actividad Reciente Section */}
-      <ScrollReveal delay={0.1} parallax>
-        <section className="w-full py-24 bg-white border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <PaymentTable />
           </div>
         </section>
       </ScrollReveal>

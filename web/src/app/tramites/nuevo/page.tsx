@@ -1,240 +1,184 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
-import { useToast } from '../../../core/components/Toast';
-import { ArrowLeft, Building2, FileCheck, Tent, Store, Recycle, Loader2, CheckCircle2, ShoppingCart, CreditCard } from 'lucide-react';
+import { ArrowLeft, Building2, FileCheck, Tent, Store, Recycle, MapPin, Clock, Phone, Info } from 'lucide-react';
 import Link from 'next/link';
-import { useCart } from '../../../core/presentation/CartContext';
-import { PaymentModal } from '../../../features/payments/presentation/components/PaymentModal';
 
 const TIPOS_TRAMITE = [
-  { value: 'permiso_construccion', label: 'Permiso de Construcción', icon: <Building2 className="w-4 h-4" /> },
-  { value: 'uso_suelo', label: 'Certificación de Uso de Suelo', icon: <FileCheck className="w-4 h-4" /> },
-  { value: 'espacio_publico', label: 'Uso de Espacio Público', icon: <Tent className="w-4 h-4" /> },
-  { value: 'registro_comercial', label: 'Registro Comercial / Patente', icon: <Store className="w-4 h-4" /> },
-  { value: 'recoleccion_especial', label: 'Recolección Especial', icon: <Recycle className="w-4 h-4" /> },
+  { value: 'permiso_construccion', label: 'Permiso de Construcción', icon: <Building2 className="w-4 h-4" />, requisitos: ['RNC y cédula', 'Planos arquitectónicos', 'Comprobante de propiedad', 'Pago de tasa'], tasa: 'Variable según proyecto' },
+  { value: 'uso_suelo', label: 'Certificación de Uso de Suelo', icon: <FileCheck className="w-4 h-4" />, requisitos: ['Cédula o RNC', 'Comprobante de propiedad', 'Plano catastral'], tasa: 'RD$ 150.00' },
+  { value: 'espacio_publico', label: 'Uso de Espacio Público', icon: <Tent className="w-4 h-4" />, requisitos: ['Cédula', 'Propuesta técnica', 'Seguro de responsabilidad'], tasa: 'Variable según uso' },
+  { value: 'registro_comercial', label: 'Registro Comercial / Patente', icon: <Store className="w-4 h-4" />, requisitos: ['RNC y cédula', 'Comprobante de domicilio', 'Licencia sanitaria'], tasa: 'RD$ 500.00 anual' },
+  { value: 'recoleccion_especial', label: 'Recolección Especial', icon: <Recycle className="w-4 h-4" />, requisitos: ['Cédula', 'Dirección de inmueble', 'Comprobante de residencia'], tasa: 'RD$ 800.00' },
 ];
 
 export default function NuevoTramitePage() {
   const router = useRouter();
-  const { showToast } = useToast();
-
-  // Estados locales para simulación (Modo Mock) para evitar llamadas al backend real
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  
-  const { addItem } = useCart();
-  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
-
-  const [formData, setFormData] = useState({
-    titulo: '',
-    solicitante: '',
-    tipoTramite: 'permiso_construccion',
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.titulo || !formData.solicitante) {
-      setError('Por favor, complete todos los campos obligatorios.');
-      return;
-    }
-
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const tipoLabel = TIPOS_TRAMITE.find(t => t.value === formData.tipoTramite)?.label || 'Trámite';
-
-      // Simulando procesamiento asíncrono premium de 1.2 segundos
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-
-      // Desplegamos el Toast de éxito y cambiamos estado
-      showToast(`¡${tipoLabel} registrado exitosamente!`, 'success');
-      setIsSuccess(true);
-    } catch (err) {
-      setError('Error al registrar la solicitud. Intente nuevamente.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const selectedTipo = TIPOS_TRAMITE.find(t => t.value === formData.tipoTramite);
-
-  if (isSuccess) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex flex-col pt-24 pb-12">
-        <div className="max-w-xl mx-auto w-full px-4 sm:px-6">
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-10 text-center animate-in fade-in zoom-in duration-500">
-            <div className="mx-auto w-20 h-20 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-6 shadow-inner">
-              <CheckCircle2 className="w-10 h-10" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#051429] mb-2">Trámite Registrado</h2>
-            <p className="text-gray-500 mb-8">Su solicitud ha sido recibida con éxito y se encuentra pendiente de pago para iniciar revisión.</p>
-            
-            <div className="flex flex-col gap-3">
-              <button
-                onClick={() => setIsPaymentModalOpen(true)}
-                className="w-full bg-[#051429] hover:bg-[#081F5C] text-[#E9D9AE] font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-[0_8px_20px_rgba(5,20,41,0.2)] hover:-translate-y-0.5"
-              >
-                <CreditCard className="w-5 h-5" />
-                Pagar Ahora (RD$ 2,500.00)
-              </button>
-              <button
-                onClick={() => {
-                  addItem({ serviceName: selectedTipo?.label || 'Trámite', price: 2500, reference: 'TRM-' + Math.floor(Math.random() * 1000) });
-                  router.push('/');
-                }}
-                className="w-full bg-slate-50 hover:bg-slate-100 text-[#051429] font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all border border-slate-200"
-              >
-                <ShoppingCart className="w-5 h-5 text-slate-400" />
-                Agregar al Carrito
-              </button>
-              <button
-                onClick={() => router.push('/')}
-                className="mt-4 text-sm font-semibold text-slate-400 hover:text-[#051429] transition-colors"
-              >
-                Volver al inicio
-              </button>
-            </div>
-          </div>
-        </div>
-        <PaymentModal 
-          isOpen={isPaymentModalOpen} 
-          onClose={() => setIsPaymentModalOpen(false)} 
-          monto={2500} 
-          concepto={selectedTipo?.label || 'Trámite'} 
-          referenciaSolicitud={'TRM-' + Math.floor(Math.random() * 1000)} 
-        />
-      </div>
-    );
-  }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col pt-24 pb-12">
-      <div className="max-w-2xl mx-auto w-full px-4 sm:px-6">
+    <div className="min-h-screen bg-gray-50 flex flex-col pt-24 pb-16">
+      <div className="max-w-4xl mx-auto w-full px-4 sm:px-6">
 
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-12">
           <Link href="/" className="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-navy mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al Portal
           </Link>
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-[#051429] rounded-xl flex items-center justify-center shadow-lg">
-              {selectedTipo?.icon ? React.cloneElement(selectedTipo.icon as React.ReactElement, { className: 'w-6 h-6 text-[#E9D9AE]' }) : <Building2 className="w-6 h-6 text-[#E9D9AE]" />}
+              <FileCheck className="w-6 h-6 text-[#E9D9AE]" />
             </div>
             <div>
               <h1 className="text-3xl font-sans font-black tracking-tight text-[#051429]">
-                Iniciar Nuevo Trámite
+                Información sobre Trámites Municipales
               </h1>
               <p className="text-gray-500 mt-1">
-                {selectedTipo?.label || 'Seleccione un tipo de trámite'}
+                Conozca los requisitos y procedimientos para cada tipo de trámite
               </p>
             </div>
           </div>
         </div>
 
-        {/* Form Container */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-
-            {error && (
-              <div className="p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-xl text-sm font-semibold flex items-center gap-2">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-                <span>{error}</span>
-              </div>
-            )}
-
-            <div className="space-y-4">
-
-              {/* Tipo de trámite selector */}
-              <div>
-                <label htmlFor="tipoTramite" className="block text-sm font-bold text-navy mb-2">
-                  Tipo de Trámite
-                </label>
-                <select
-                  id="tipoTramite"
-                  name="tipoTramite"
-                  value={formData.tipoTramite}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#B8902F] focus:border-transparent outline-none transition-all text-gray-800 bg-white appearance-none cursor-pointer"
-                >
-                  {TIPOS_TRAMITE.map(tipo => (
-                    <option key={tipo.value} value={tipo.value}>
-                      {tipo.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Título del Proyecto */}
-              <div>
-                <label htmlFor="titulo" className="block text-sm font-bold text-navy mb-2">
-                  Título del Proyecto / Obra
-                </label>
-                <input
-                  type="text"
-                  id="titulo"
-                  name="titulo"
-                  required
-                  value={formData.titulo}
-                  onChange={handleChange}
-                  placeholder="Ej. Torre Residencial Piantini"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#B8902F] focus:border-transparent outline-none transition-all text-gray-800"
-                />
-              </div>
-
-              {/* Solicitante */}
-              <div>
-                <label htmlFor="solicitante" className="block text-sm font-bold text-navy mb-2">
-                  Entidad Solicitante o Propietario
-                </label>
-                <input
-                  type="text"
-                  id="solicitante"
-                  name="solicitante"
-                  required
-                  value={formData.solicitante}
-                  onChange={handleChange}
-                  placeholder="Ej. Constructora Alfa SRL"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#B8902F] focus:border-transparent outline-none transition-all text-gray-800"
-                />
-              </div>
+        {/* Introduction */}
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 mb-12">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <Info className="w-5 h-5 text-white" />
             </div>
-
-            {/* Acciones */}
-            <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
-              <p className="text-xs text-gray-400">
-                Al enviar esta solicitud, acepta los términos institucionales del ADN.
+            <div>
+              <h2 className="text-xl font-bold text-blue-900 mb-2">Cómo solicitar trámites</h2>
+              <p className="text-blue-800">
+                Todos los trámites municipales deben gestionarse presencialmente en las ventanillas del Ayuntamiento del Distrito Nacional. 
+                A continuación encontrará información detallada sobre cada tipo de trámite disponible, incluyendo requisitos y tasas aplicables.
               </p>
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="bg-[#051429] hover:bg-[#0a2244] text-white px-8 py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-md min-w-[180px]"
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin text-[#E9D9AE]" />
-                    <span>Procesando...</span>
-                  </>
-                ) : (
-                  <span>Registrar Solicitud</span>
-                )}
-              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Service Details Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {TIPOS_TRAMITE.map(tramite => (
+            <div key={tramite.value} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all">
+              <div className="bg-gradient-to-r from-slate-50 to-slate-100 p-6 border-b border-gray-100">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-[#051429] rounded-full flex items-center justify-center text-white">
+                    {tramite.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-[#051429]">{tramite.label}</h3>
+                </div>
+              </div>
+
+              <div className="p-6 space-y-4">
+                <div>
+                  <h4 className="font-bold text-sm text-gray-700 mb-2 uppercase tracking-wide">Requisitos:</h4>
+                  <ul className="space-y-2">
+                    {tramite.requisitos.map((req, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-[#B8902F] font-bold">✓</span>
+                        <span>{req}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="font-bold text-sm text-gray-700 mb-1">Tasa Municipal:</p>
+                  <p className="text-[#051429] font-bold text-base">{tramite.tasa}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-12">
+          <h2 className="text-2xl font-bold text-[#051429] mb-8">Información de Contacto</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Ubicación</h3>
+                <p className="text-sm text-gray-600">
+                  Ayuntamiento del Distrito Nacional<br/>
+                  Avenida Máximo Gómez<br/>
+                  Santo Domingo, República Dominicana
+                </p>
+              </div>
             </div>
 
-          </form>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Clock className="w-6 h-6 text-emerald-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Horario de Atención</h3>
+                <p className="text-sm text-gray-600">
+                  Lunes a Viernes<br/>
+                  8:00 AM - 4:00 PM<br/>
+                  Cerrado los feriados nacionales
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Phone className="w-6 h-6 text-amber-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-1">Teléfono</h3>
+                <p className="text-sm text-gray-600">
+                  +1 (809) 555-0100<br/>
+                  Ext. Trámites: 1234<br/>
+                  Disponible de lunes a viernes
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Important Information */}
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-8 mb-12">
+          <h3 className="font-bold text-amber-900 mb-4 flex items-center gap-2">
+            <span className="text-xl">⚠️</span>
+            Información Importante
+          </h3>
+          <ul className="space-y-3 text-sm text-amber-900">
+            <li className="flex gap-3">
+              <span className="font-bold flex-shrink-0">•</span>
+              <span>Se debe presentar solicitud presencialmente en las ventanillas del Ayuntamiento.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold flex-shrink-0">•</span>
+              <span>Los documentos deben presentarse en original y fotocopia.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold flex-shrink-0">•</span>
+              <span>El pago de tasas municipales se realiza en la ventanilla correspondiente.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold flex-shrink-0">•</span>
+              <span>Los tiempos de procesamiento varían según la complejidad del trámite.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold flex-shrink-0">•</span>
+              <span>Se recomienda contactar con anticipación para consultas específicas.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <button
+            onClick={() => router.push('/servicios')}
+            className="bg-[#051429] hover:bg-[#0a2244] text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-md"
+          >
+            Ver todos los servicios disponibles
+          </button>
         </div>
 
       </div>

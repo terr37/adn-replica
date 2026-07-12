@@ -1,0 +1,1897 @@
+{
+  "AssemblyScanning": {
+    "Assemblies": [
+      {
+        "FullName": "CajaADN.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "1.0.0"
+      },
+      {
+        "FullName": "NServiceBus.Core, Version=10.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "10.2.7"
+      },
+      {
+        "FullName": "CajaADN.Integration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "1.0.0"
+      },
+      {
+        "FullName": "CajaADN.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "1.0.0"
+      },
+      {
+        "FullName": "NServiceBus.MessageInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "1.0.0"
+      }
+    ],
+    "SkippedFiles": [
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Build.Framework.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.CSharp.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.Workspaces.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Data.Sqlite.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Design.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Relational.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Sqlite.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Caching.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Caching.Memory.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Binder.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.CommandLine.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.UserSecrets.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyInjection.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Diagnostics.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Diagnostics.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileProviders.Physical.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileSystemGlobbing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Hosting.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Console.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Debug.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.EventLog.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.EventSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Options.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.VisualStudio.SolutionPersistence.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Newtonsoft.Json.dll",
+        "SkipReason": "File was explicitly excluded from scanning."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Core.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Extensions.Hosting.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.MessageInterfaces.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Transport.RabbitMQ.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.AttributedModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Convention.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Runtime.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.TypedParts.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.IO.Hashing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Threading.RateLimiting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\CajaADN.UI.exe",
+        "SkipReason": "File is not a .NET assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Caching.Memory.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Security.Cryptography.Pkcs.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.CSharp.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.UnmanagedMemoryStream.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Principal.Windows.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.EventLog.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.DiagnosticSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Build.Framework.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Sqlite.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.Workspaces.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Hosting.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Data.Sqlite.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.VisualStudio.SolutionPersistence.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Convention.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Options.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Web.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Drawing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Relational.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Channels.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Debug.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.Process.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.EntityFrameworkCore.Design.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Diagnostics.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.Tools.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Caching.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Binder.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework-SystemXmlLinq.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileProviders.Physical.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.CommandLine.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Royale.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\Microsoft.VisualBasic.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Configuration.UserSecrets.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.DispatchProxy.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyInjection.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Input.Manipulations.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.DependencyModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Transport.RabbitMQ.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Diagnostics.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Pipes.AccessControl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.IO.Hashing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Serialization.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.FileSystemGlobbing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Extensions.Hosting.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.Console.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.AttributedModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationUI.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Logging.EventSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Claims.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\Newtonsoft.Json.dll",
+        "SkipReason": "File was explicitly excluded from scanning."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework-SystemData.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.Core.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\NServiceBus.MessageInterfaces.dll",
+        "SkipReason": "File is a Particular assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Web.HttpUtility.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.CompilerServices.VisualC.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.TypedParts.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Composition.Runtime.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\System.Threading.RateLimiting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Resources.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Diagnostics.EventLog.Messages.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\Accessibility.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Design.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Linq.AsyncEnumerable.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Drawing.Design.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Forms.Design.Editors.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\Microsoft.Win32.Registry.AccessControl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\Microsoft.Win32.SystemEvents.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.TypeExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.CodeDom.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Configuration.ConfigurationManager.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\Microsoft.VisualBasic.Core.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Diagnostics.EventLog.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Diagnostics.PerformanceCounter.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Pipes.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.DirectoryServices.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Formats.Nrbf.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.IO.Packaging.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Security.Cryptography.ProtectedData.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Security.Cryptography.Xml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Security.Permissions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Classic.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\Microsoft.VisualBasic.Forms.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Drawing.Common.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Formats.Tar.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Private.Windows.Core.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Private.Windows.GdiPlus.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.Encoding.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Forms.Design.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Forms.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Forms.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\DirectWriteForwarder.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.FileSystem.AccessControl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationCore.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Overlapped.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework-SystemCore.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Globalization.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework-SystemDrawing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework-SystemXml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Compression.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Aero.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Aero2.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.AeroLite.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Fluent.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\PresentationFramework.Luna.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\ReachFramework.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Printing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Controls.Ribbon.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Security.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Console.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Presentation.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Windows.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Resources.Writer.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\System.Xaml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\WindowsBase.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\UIAutomationClient.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\UIAutomationClientSideProviders.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\UIAutomationProvider.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\UIAutomationTypes.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Transactions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\10.0.8\\WindowsFormsIntegration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.CoreLib.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ServiceModel.Web.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\Microsoft.Win32.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\mscorlib.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\netstandard.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.AppContext.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Buffers.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.DataAnnotations.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Core.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Data.DataSetExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.NameResolution.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Data.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.Contracts.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.Debug.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.Tracing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Windows.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Dynamic.Runtime.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Globalization.Calendars.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Collections.NonGeneric.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Globalization.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Compression.FileSystem.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Formats.Asn1.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.FileSystem.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.FileSystem.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.ServicePoint.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Numerics.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Transactions.Local.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Drawing.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Numerics.Vectors.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.XmlDocument.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Emit.ILGeneration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.Encoding.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Emit.Lightweight.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ValueTuple.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Resources.Reader.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Resources.ResourceManager.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.CompilerServices.Unsafe.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Handles.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.InteropServices.RuntimeInformation.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Intrinsics.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Loader.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Serialization.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Serialization.Xml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.Algorithms.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.Cng.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.Csp.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.Encoding.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.OpenSsl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.Annotations.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Cryptography.X509Certificates.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.Principal.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.SecureString.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ServiceProcess.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.TypeConverter.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Tasks.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Tasks.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Thread.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.ThreadPool.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Timer.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.Linq.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.ReaderWriter.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.MemoryMappedFiles.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.Serialization.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.XDocument.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.XmlSerializer.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Numerics.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.XPath.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\Microsoft.CSharp.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\Microsoft.Win32.Registry.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Collections.Concurrent.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.Encodings.Web.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Collections.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Collections.Immutable.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Collections.Specialized.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.EventBasedAsync.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ComponentModel.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Data.Common.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.FileVersionInfo.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.StackTrace.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.TextWriterTraceListener.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Diagnostics.TraceSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Compression.Brotli.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Compression.ZipFile.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.FileSystem.DriveInfo.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.FileSystem.Watcher.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.IsolatedStorage.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.IO.Pipelines.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Linq.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Linq.Expressions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Linq.Parallel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Linq.Queryable.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Memory.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Http.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Http.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.WebSockets.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.HttpListener.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Mail.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.NetworkInformation.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Ping.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Quic.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Requests.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.ServerSentEvents.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.Sockets.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.WebClient.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.WebHeaderCollection.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.WebProxy.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Net.WebSockets.Client.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.ObjectModel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.DataContractSerialization.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.Uri.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.Xml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.Xml.Linq.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Emit.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Reflection.Metadata.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.InteropServices.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.InteropServices.JavaScript.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Serialization.Formatters.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Runtime.Serialization.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Security.AccessControl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.Encoding.CodePages.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Text.RegularExpressions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.AccessControl.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Tasks.Dataflow.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Threading.Tasks.Parallel.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Xml.XPath.XDocument.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.8\\System.Private.CoreLib.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      }
+    ],
+    "ErrorsThrownDuringScanning": false,
+    "Settings": {
+      "Disable": false,
+      "ScanAppDomainAssemblies": true,
+      "ScanFileSystemAssemblies": true,
+      "ThrowExceptions": true,
+      "ScanAssembliesInNestedDirectories": false,
+      "AdditionalAssemblyScanningPath": null
+    }
+  },
+  "Container": {
+    "Type": "external"
+  },
+  "Endpoint": {
+    "Name": "ADN.Caja",
+    "SendOnly": false,
+    "NServiceBusVersion": "10.2.7"
+  },
+  "Features": [
+    {
+      "Name": "NServiceBus.ReceiveStatisticsFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.SerializationFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.StaticHeaders",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "No static outgoing headers registered"
+        ]
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Audit",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "Auditing has been explicitly disabled."
+        ]
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageCausation",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageCorrelation",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.DelayedDeliveryFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.RootFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.LicenseReminder",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Mutators",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.TimeToBeReceived",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Sagas",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "No sagas were found. Either enable assembly scanning or manually register sagas using AddSaga<TSaga>()."
+        ]
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.SynchronizedStorage"
+        ]
+      ],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.SynchronizedStorage",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.AutoSubscribe",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [
+        "ApplySubscriptions"
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.InferredMessageTypeEnricherFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageDrivenSubscriptions",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "The transport supports native pub sub"
+        ]
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.NativePublishSubscribeFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.SubscriptionMigrationMode",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "The transport has not enabled subscription migration mode"
+        ]
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.AutoCorrelationFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.PlatformRetryNotifications",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.OpenTelemetryFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Transport.TransportDefinition+TransportServiceCollectionProviderFeature",
+      "Enabled": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.LearningSynchronizedStorage",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.SynchronizedStorage"
+        ]
+      ],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.LearningSagaPersistence",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.Sagas"
+        ],
+        [
+          "NServiceBus.LearningSynchronizedStorage"
+        ]
+      ],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.Outbox",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.SynchronizedStorage"
+        ]
+      ],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.TransactionScopeUnitOfWork",
+      "Enabled": false,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": []
+      },
+      "Dependencies": [],
+      "Version": "10.2.7",
+      "StartupTasks": [],
+      "DependenciesAreMet": false
+    }
+  ],
+  "Hosting": {
+    "HostId": "1fa25c21-ccb4-99c4-f3a0-5e26112fbc9f",
+    "HostDisplayName": "DESKTOP-7TON72A",
+    "MachineName": "DESKTOP-7TON72A",
+    "OSPlatform": 2,
+    "OSVersion": "Microsoft Windows NT 10.0.22631.0",
+    "IsServerGC": false,
+    "GCLatencyMode": 1,
+    "ProcessorCount": 12,
+    "Is64BitProcess": true,
+    "CLRVersion": "10.0.8",
+    "WorkingSet": 55545856,
+    "SystemPageSize": 4096,
+    "HostName": "DESKTOP-7TON72A",
+    "UserName": "UserGPC",
+    "PathToExe": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\bin\\Debug\\net10.0-windows\\CajaADN.UI.dll",
+    "InstallersEnabled": true
+  },
+  "Installation": {
+    "InstallersEnabled": []
+  },
+  "Licensing": {
+    "RegisteredTo": null,
+    "LicenseType": "Trial",
+    "Edition": null,
+    "Tier": null,
+    "LicenseStatus": 0,
+    "LicenseLocation": "Trial License",
+    "ValidApplications": "All",
+    "CommercialLicense": false,
+    "IsExpired": false,
+    "ExpirationDate": "2026-07-18T00:00:00",
+    "UpgradeProtectionExpirationDate": null
+  },
+  "Manifest-ErrorQueue": "ADN.errors",
+  "Manifest-MessageTypes": [
+    {
+      "Name": "PagoRegistradoReply",
+      "FullName": "CajaADN.Contracts.Replies.PagoRegistradoReply",
+      "IsMessage": true,
+      "IsEvent": false,
+      "IsCommand": false,
+      "Schema": [
+        {
+          "Name": "TransaccionId",
+          "Type": "Guid"
+        },
+        {
+          "Name": "Exito",
+          "Type": "Boolean"
+        },
+        {
+          "Name": "StatusCode",
+          "Type": "Int32"
+        },
+        {
+          "Name": "ErrorCode",
+          "Type": "String"
+        },
+        {
+          "Name": "Message",
+          "Type": "String"
+        }
+      ]
+    }
+  ],
+  "Manifest-SendingQueues": [
+    "ADN.errors"
+  ],
+  "Messages": {
+    "CustomConventionUsed": false,
+    "MessageConventions": [
+      "NServiceBus Marker Interfaces"
+    ],
+    "NumberOfMessagesFoundAtStartup": 2,
+    "Messages": [
+      "CajaADN.Contracts.Commands.RegistrarPagoCommand",
+      "CajaADN.Contracts.Replies.PagoRegistradoReply"
+    ],
+    "AllowDynamicTypeLoading": true
+  },
+  "Receiving": {
+    "LocalQueueAddress": {
+      "BaseAddress": "ADN.Caja",
+      "Discriminator": null,
+      "Properties": {},
+      "Qualifier": null
+    },
+    "InstanceSpecificQueueAddress": null,
+    "PurgeOnStartup": false,
+    "TransactionMode": "ReceiveOnly",
+    "MaxConcurrency": 12,
+    "Satellites": [],
+    "MessageHandlers": {
+      "CajaADN.Contracts.Replies.PagoRegistradoReply": [
+        "CajaADN.Integration.Handlers.PagoRegistradoReplyHandler"
+      ]
+    }
+  },
+  "Recoverability": {
+    "ImmediateRetries": 2,
+    "DelayedRetries": 3,
+    "DelayedRetriesTimeIncrease": "0:00:10",
+    "ErrorQueue": "ADN.errors",
+    "UnrecoverableExceptions": [
+      "NServiceBus.MessageDeserializationException"
+    ]
+  },
+  "Serialization": {
+    "MainSerializer": {
+      "Type": "NServiceBus.SystemJsonSerializer",
+      "Version": "10.2.7",
+      "ContentType": "application/json"
+    },
+    "AdditionalDeserializers": [],
+    "AllowMessageTypeInference": true
+  }
+}

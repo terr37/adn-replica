@@ -1,0 +1,308 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.domain\\enums\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|solutionrelative:cajaadn.domain\\enums\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.domain\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|solutionrelative:cajaadn.domain\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|solutionrelative:cajaadn.ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|solutionrelative:cajaadn.ui\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\services\\dbcatastroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\services\\dbcatastroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\services\\dbauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\services\\dbauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\migrations\\cajadbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\migrations\\cajadbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\migrations\\20260712202428_quitarfondoinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\migrations\\20260712202428_quitarfondoinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\migrations\\20260712195307_inicialsqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\migrations\\20260712195307_inicialsqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4E3E6A6-F874-3E40-1888-36246F07F953}|CajaADN.Application\\CajaADN.Application.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.application\\services\\sesionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4E3E6A6-F874-3E40-1888-36246F07F953}|CajaADN.Application\\CajaADN.Application.csproj|solutionrelative:cajaadn.application\\services\\sesionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4E3E6A6-F874-3E40-1888-36246F07F953}|CajaADN.Application\\CajaADN.Application.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.application\\services\\cobroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4E3E6A6-F874-3E40-1888-36246F07F953}|CajaADN.Application\\CajaADN.Application.csproj|solutionrelative:cajaadn.application\\services\\cobroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\data\\cajadbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\data\\cajadbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.integration\\data\\cajadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8F7701-9865-D97F-F037-08C4DE39699D}|CajaADN.Integration\\CajaADN.Integration.csproj|solutionrelative:cajaadn.integration\\data\\cajadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|solutionrelative:cajaadn.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.domain\\models\\sesioncaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3378A33F-C806-9916-C7C7-F6AF06428D35}|CajaADN.Domain\\CajaADN.Domain.csproj|solutionrelative:cajaadn.domain\\models\\sesioncaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.ui\\cajaadn.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|solutionrelative:cajaadn.ui\\cajaadn.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|c:\\users\\tuparita\\source\\repos\\adn-replica\\caja\\cajaadn.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D836900A-140F-6C40-4C96-97284E416DE6}|CajaADN.UI\\CajaADN.UI.csproj|solutionrelative:cajaadn.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Forms\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "CajaADN.UI\\Forms\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Forms\\FrmLogin.cs",
+              "RelativeToolTip": "CajaADN.UI\\Forms\\FrmLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:05:22.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Forms\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "CajaADN.UI\\Forms\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Forms\\FrmLogin.cs [Design]",
+              "RelativeToolTip": "CajaADN.UI\\Forms\\FrmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:05:19.126Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbCatastroService.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Services\\DbCatastroService.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Services\\DbCatastroService.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Services\\DbCatastroService.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Services\\DbCatastroService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:04:56.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Services\\DbAuthService.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Services\\DbAuthService.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Services\\DbAuthService.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Services\\DbAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:04:48.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CajaDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\CajaDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Migrations\\CajaDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\CajaDbContextModelSnapshot.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Migrations\\CajaDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:04:25.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260712202428_QuitarFondoInicial.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\20260712202428_QuitarFondoInicial.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Migrations\\20260712202428_QuitarFondoInicial.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\20260712202428_QuitarFondoInicial.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Migrations\\20260712202428_QuitarFondoInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:04:20.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "CajaADN.Domain\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "CajaADN.Domain\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:01:00.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RolUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Enums\\RolUsuario.cs",
+              "RelativeDocumentMoniker": "CajaADN.Domain\\Enums\\RolUsuario.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Enums\\RolUsuario.cs",
+              "RelativeToolTip": "CajaADN.Domain\\Enums\\RolUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:01:26.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20260712195307_InicialSqlite.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\20260712195307_InicialSqlite.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Migrations\\20260712195307_InicialSqlite.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Migrations\\20260712195307_InicialSqlite.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Migrations\\20260712195307_InicialSqlite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:03:44.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SesionService.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Application\\Services\\SesionService.cs",
+              "RelativeDocumentMoniker": "CajaADN.Application\\Services\\SesionService.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Application\\Services\\SesionService.cs",
+              "RelativeToolTip": "CajaADN.Application\\Services\\SesionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:03:14.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CobroService.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Application\\Services\\CobroService.cs",
+              "RelativeDocumentMoniker": "CajaADN.Application\\Services\\CobroService.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Application\\Services\\CobroService.cs",
+              "RelativeToolTip": "CajaADN.Application\\Services\\CobroService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:03:08.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CajaDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Data\\CajaDbContextFactory.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Data\\CajaDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Data\\CajaDbContextFactory.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Data\\CajaDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:02:37.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CajaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Data\\CajaDbContext.cs",
+              "RelativeDocumentMoniker": "CajaADN.Integration\\Data\\CajaDbContext.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\Data\\CajaDbContext.cs",
+              "RelativeToolTip": "CajaADN.Integration\\Data\\CajaDbContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:02:03.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "CajaADN.Domain\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Models\\Usuario.cs",
+              "RelativeToolTip": "CajaADN.Domain\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:01:34.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SesionCaja.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Models\\SesionCaja.cs",
+              "RelativeDocumentMoniker": "CajaADN.Domain\\Models\\SesionCaja.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\Models\\SesionCaja.cs",
+              "RelativeToolTip": "CajaADN.Domain\\Models\\SesionCaja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T22:01:33.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CajaADN.UI",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\CajaADN.UI.csproj",
+              "RelativeDocumentMoniker": "CajaADN.UI\\CajaADN.UI.csproj",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\CajaADN.UI.csproj",
+              "RelativeToolTip": "CajaADN.UI\\CajaADN.UI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-12T21:59:24.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Program.cs",
+              "RelativeDocumentMoniker": "CajaADN.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\Tuparita\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\Program.cs",
+              "RelativeToolTip": "CajaADN.UI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T21:58:50.89Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

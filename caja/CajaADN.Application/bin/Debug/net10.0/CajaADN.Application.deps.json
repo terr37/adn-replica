@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CajaADN.Application/1.0.0": {
+        "dependencies": {
+          "CajaADN.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CajaADN.Application.dll": {}
+        }
+      },
+      "CajaADN.Domain/1.0.0": {
+        "runtime": {
+          "CajaADN.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CajaADN.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CajaADN.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

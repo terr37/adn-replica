@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Administrativo — ADN Core</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f0f2f5;
+        color: #1a1a2e;
+      }
+      header {
+        background: #0e2f52;
+        color: white;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 20px;
+      }
+      #logout-btn {
+        background: #b8902f;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      #login-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-box {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+        width: 360px;
+      }
+      .login-box h2 {
+        margin-bottom: 24px;
+        color: #0e2f52;
+      }
+      .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .login-box button {
+        width: 100%;
+        padding: 10px;
+        background: #0e2f52;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .login-box button:hover {
+        background: #163f69;
+      }
+      #error-msg {
+        color: red;
+        font-size: 13px;
+        margin-bottom: 12px;
+        display: none;
+      }
+      #main-screen {
+        display: none;
+      }
+      nav {
+        background: #08203d;
+        padding: 0 32px;
+        display: flex;
+        gap: 4px;
+      }
+      nav button {
+        background: none;
+        color: #aeb9c1;
+        border: none;
+        padding: 14px 18px;
+        cursor: pointer;
+        font-size: 14px;
+        border-bottom: 3px solid transparent;
+      }
+      nav button:hover,
+      nav button.active {
+        color: white;
+        border-bottom-color: #b8902f;
+      }
+      .content {
+        padding: 32px;
+      }
+      .section {
+        display: none;
+      }
+      .section.active {
+        display: block;
+      }
+      h2.section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #0e2f52;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      }
+      thead th {
+        background: #0e2f52;
+        color: white;
+        padding: 12px 14px;
+        text-align: left;
+        font-size: 13px;
+      }
+      tbody td {
+        padding: 11px 14px;
+        border-bottom: 1px solid #e4e9ec;
+        font-size: 13px;
+      }
+      tbody tr:hover {
+        background: #f1f4f6;
+      }
+      .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .badge-creado {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+      .badge-revision {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .badge-pago {
+        background: #ede9fe;
+        color: #5b21b6;
+      }
+      .badge-completado {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .badge-rechazado {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .badge-disponible {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .badge-ocupada {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .badge-abierto {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .badge-proceso {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+      .badge-resuelto {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .badge-pendiente {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .badge-pagada {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .action-btn {
+        padding: 5px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 4px;
+      }
+      .btn-state {
+        background: #0e2f52;
+        color: white;
+      }
+      .btn-disable {
+        background: #7a2e2e;
+        color: white;
+      }
+      .btn-state:hover {
+        background: #163f69;
+      }
+      .btn-disable:hover {
+        background: #991b1b;
+      }
+      .rol-badge {
+        font-size: 11px;
+        background: #b8902f;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 10px;
+        margin-left: 8px;
+      }
+      select.state-select {
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+      .readonly-notice {
+        background: #fef3c7;
+        border-left: 4px solid #b8902f;
+        padding: 10px 16px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-screen">
+      <div class="login-box">
+        <h2>Panel Administrativo ADN</h2>
+        <p id="error-msg">Usuario o contraseña incorrectos.</p>
+        <input type="text" id="username" placeholder="Usuario" />
+        <input type="password" id="password" placeholder="Contraseña" />
+        <button onclick="login()">Iniciar sesión</button>
+      </div>
+    </div>
+
+    <div id="main-screen">
+      <header>
+        <h1>Panel Administrativo — Ayuntamiento del Distrito Nacional</h1>
+        <div>
+          <span id="user-info"></span>
+          <button id="logout-btn" onclick="logout()">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <nav>
+        <button class="active" onclick="showSection('permisos', this)">
+          Permisos
+        </button>
+        <button onclick="showSection('inmuebles', this)">Inmuebles</button>
+        <button onclick="showSection('facturas', this)">Facturas</button>
+        <button onclick="showSection('incidencias', this)">Incidencias</button>
+        <button onclick="showSection('fosas', this)">Fosas</button>
+        <button onclick="showSection('pagos', this)">Historial de Pagos</button>
+      </nav>
+
+      <div class="content">
+        <div class="readonly-notice" id="readonly-notice">
+          Estás en modo <strong>Solo Lectura</strong> — no puedes modificar
+          registros.
+        </div>
+
+        <!-- PERMISOS -->
+        <div class="section active" id="section-permisos">
+          <h2 class="section-title">Permisos de Construcción y Demolición</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Solicitante</th>
+                <th>Cédula</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th class="editor-only">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-permisos"></tbody>
+          </table>
+        </div>
+
+        <!-- INMUEBLES -->
+        <div class="section" id="section-inmuebles">
+          <h2 class="section-title">Catastro de Inmuebles</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Propietario</th>
+                <th>Dirección</th>
+                <th>Zona</th>
+                <th>Tipo</th>
+                <th>Tarifa</th>
+                <th class="editor-only">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-inmuebles"></tbody>
+          </table>
+        </div>
+
+        <!-- FACTURAS -->
+        <div class="section" id="section-facturas">
+          <h2 class="section-title">Facturas de Aseo Urbano</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Inmueble ID</th>
+                <th>Monto</th>
+                <th>Mes</th>
+                <th>Estado</th>
+                <th>Transacción ID</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-facturas"></tbody>
+          </table>
+        </div>
+
+        <!-- INCIDENCIAS -->
+        <div class="section" id="section-incidencias">
+          <h2 class="section-title">Incidencias Viales</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Reportado por</th>
+                <th>Estado</th>
+                <th class="editor-only">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-incidencias"></tbody>
+          </table>
+        </div>
+
+        <!-- FOSAS -->
+        <div class="section" id="section-fosas">
+          <h2 class="section-title">Cementerios — Fosas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Sección</th>
+                <th>Estado</th>
+                <th>Titular</th>
+                <th>Fecha Venta</th>
+                <th class="editor-only">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-fosas"></tbody>
+          </table>
+        </div>
+
+        <!-- PAGOS -->
+        <div class="section" id="section-pagos">
+          <h2 class="section-title">Historial de Pagos</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Transacción ID</th>
+                <th>Inmueble ID</th>
+                <th>Monto</th>
+                <th>Mes</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-pagos"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const API = 'http://localhost:3001/api';
+      let token = null;
+      let rol = null;
+
+      function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        fetch(`${API}/admin/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+        })
+          .then((r) => r.json())
+          .then((data) => {
+            if (!data.access_token) {
+              document.getElementById('error-msg').style.display = 'block';
+              return;
+            }
+            token = data.access_token;
+            rol = data.rol;
+            document.getElementById('error-msg').style.display = 'none';
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('main-screen').style.display = 'block';
+            document.getElementById('user-info').innerHTML =
+              `${data.username} <span class="rol-badge">${rol}</span>`;
+
+            if (rol === 'SOLO_LECTURA') {
+              document.getElementById('readonly-notice').style.display =
+                'block';
+              document
+                .querySelectorAll('.editor-only')
+                .forEach((el) => (el.style.display = 'none'));
+            }
+
+            loadSection('permisos');
+          })
+          .catch(() => {
+            document.getElementById('error-msg').style.display = 'block';
+          });
+      }
+
+      function logout() {
+        token = null;
+        rol = null;
+        document.getElementById('login-screen').style.display = 'flex';
+        document.getElementById('main-screen').style.display = 'none';
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+      }
+
+      function authHeaders() {
+        return {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        };
+      }
+
+      function showSection(name, btn) {
+        document
+          .querySelectorAll('.section')
+          .forEach((s) => s.classList.remove('active'));
+        document
+          .querySelectorAll('nav button')
+          .forEach((b) => b.classList.remove('active'));
+        document.getElementById(`section-${name}`).classList.add('active');
+        btn.classList.add('active');
+        loadSection(name);
+      }
+
+      function loadSection(name) {
+        const loaders = {
+          permisos: loadPermisos,
+          inmuebles: loadInmuebles,
+          facturas: loadFacturas,
+          incidencias: loadIncidencias,
+          fosas: loadFosas,
+          pagos: loadPagos,
+        };
+        if (loaders[name]) loaders[name]();
+      }
+
+      function badgeEstado(estado) {
+        const map = {
+          CREADO: 'creado',
+          EN_REVISION: 'revision',
+          PENDIENTE_PAGO: 'pago',
+          COMPLETADO: 'completado',
+          RECHAZADO: 'rechazado',
+          DISPONIBLE: 'disponible',
+          OCUPADA: 'ocupada',
+          ABIERTO: 'abierto',
+          EN_PROCESO: 'proceso',
+          RESUELTO: 'resuelto',
+          PENDIENTE: 'pendiente',
+          PAGADA: 'pagada',
+        };
+        return `<span class="badge badge-${map[estado] || ''}">${estado}</span>`;
+      }
+
+      // PERMISOS
+      function loadPermisos() {
+        fetch(`${API}/admin/permisos`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-permisos');
+            tbody.innerHTML = data
+              .map(
+                (p) => `
+          <tr>
+            <td title="${p.id}">${p.id.slice(0, 8)}...</td>
+            <td>${p.solicitante_nombre}</td>
+            <td>${p.solicitante_cedula}</td>
+            <td>${p.tipo_permiso}</td>
+            <td>${badgeEstado(p.estado)}</td>
+            ${
+              rol === 'EDITOR'
+                ? `<td>
+              <select class="state-select" id="sel-p-${p.id}">
+                <option value="EN_REVISION">EN_REVISION</option>
+                <option value="PENDIENTE_PAGO">PENDIENTE_PAGO</option>
+                <option value="COMPLETADO">COMPLETADO</option>
+                <option value="RECHAZADO">RECHAZADO</option>
+              </select>
+              <button class="action-btn btn-state" onclick="cambiarEstadoPermiso('${p.id}')">Cambiar</button>
+              <button class="action-btn btn-disable" onclick="deshabilitarPermiso('${p.id}')">Deshabilitar</button>
+            </td>`
+                : '<td></td>'
+            }
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+
+      function cambiarEstadoPermiso(id) {
+        const estado = document.getElementById(`sel-p-${id}`).value;
+        fetch(`${API}/admin/permisos/${id}/estado`, {
+          method: 'PATCH',
+          headers: authHeaders(),
+          body: JSON.stringify({ nuevo_estado: estado }),
+        }).then(() => loadPermisos());
+      }
+
+      function deshabilitarPermiso(id) {
+        if (!confirm('¿Deshabilitar este permiso?')) return;
+        fetch(`${API}/admin/permisos/${id}/deshabilitar`, {
+          method: 'PATCH',
+          headers: authHeaders(),
+        }).then(() => loadPermisos());
+      }
+
+      // INMUEBLES
+      function loadInmuebles() {
+        fetch(`${API}/admin/inmuebles`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-inmuebles');
+            tbody.innerHTML = data
+              .map(
+                (i) => `
+          <tr>
+            <td title="${i.id}">${i.id.slice(0, 8)}...</td>
+            <td>${i.propietario_nombre}</td>
+            <td>${i.direccion}</td>
+            <td>${i.zona}</td>
+            <td>${i.tipo_uso}</td>
+            <td>RD$${Number(i.tarifa_mensual).toLocaleString()}</td>
+            ${
+              rol === 'EDITOR'
+                ? `<td>
+              <button class="action-btn btn-disable" onclick="deshabilitarInmueble('${i.id}')">Deshabilitar</button>
+            </td>`
+                : '<td></td>'
+            }
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+
+      function deshabilitarInmueble(id) {
+        if (!confirm('¿Deshabilitar este inmueble?')) return;
+        fetch(`${API}/admin/inmuebles/${id}/deshabilitar`, {
+          method: 'PATCH',
+          headers: authHeaders(),
+        }).then(() => loadInmuebles());
+      }
+
+      // FACTURAS
+      function loadFacturas() {
+        fetch(`${API}/admin/facturas`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-facturas');
+            tbody.innerHTML = data
+              .map(
+                (f) => `
+          <tr>
+            <td title="${f.id}">${f.id.slice(0, 8)}...</td>
+            <td title="${f.inmueble_id}">${f.inmueble_id.slice(0, 8)}...</td>
+            <td>RD$${Number(f.monto).toLocaleString()}</td>
+            <td>${f.mes_facturado}</td>
+            <td>${badgeEstado(f.estado)}</td>
+            <td title="${f.transaccion_id || ''}">${f.transaccion_id ? f.transaccion_id.slice(0, 8) + '...' : '—'}</td>
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+
+      // INCIDENCIAS
+      function loadIncidencias() {
+        fetch(`${API}/admin/incidencias`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-incidencias');
+            tbody.innerHTML = data
+              .map(
+                (i) => `
+          <tr>
+            <td title="${i.id}">${i.id.slice(0, 8)}...</td>
+            <td>${i.tipo}</td>
+            <td>${i.descripcion || '—'}</td>
+            <td>${i.reportado_por || '—'}</td>
+            <td>${badgeEstado(i.estado)}</td>
+            ${
+              rol === 'EDITOR'
+                ? `<td>
+              <select class="state-select" id="sel-i-${i.id}">
+                <option value="ABIERTO">ABIERTO</option>
+                <option value="EN_PROCESO">EN_PROCESO</option>
+                <option value="RESUELTO">RESUELTO</option>
+              </select>
+              <button class="action-btn btn-state" onclick="cambiarEstadoIncidencia('${i.id}')">Cambiar</button>
+            </td>`
+                : '<td></td>'
+            }
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+
+      function cambiarEstadoIncidencia(id) {
+        const estado = document.getElementById(`sel-i-${id}`).value;
+        fetch(`${API}/admin/incidencias/${id}/estado`, {
+          method: 'PATCH',
+          headers: authHeaders(),
+          body: JSON.stringify({ nuevo_estado: estado }),
+        }).then(() => loadIncidencias());
+      }
+
+      // FOSAS
+      function loadFosas() {
+        fetch(`${API}/admin/fosas`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-fosas');
+            tbody.innerHTML = data
+              .map(
+                (f) => `
+          <tr>
+            <td>${f.codigo_fosa}</td>
+            <td>${f.seccion}</td>
+            <td>${badgeEstado(f.estado)}</td>
+            <td>${f.titular_nombre || '—'}</td>
+            <td>${f.fecha_venta || '—'}</td>
+            ${
+              rol === 'EDITOR'
+                ? `<td>
+              <button class="action-btn btn-disable" onclick="deshabilitarFosa('${f.id}')">Deshabilitar</button>
+            </td>`
+                : '<td></td>'
+            }
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+
+      function deshabilitarFosa(id) {
+        if (!confirm('¿Deshabilitar esta fosa?')) return;
+        fetch(`${API}/admin/fosas/${id}/deshabilitar`, {
+          method: 'PATCH',
+          headers: authHeaders(),
+        }).then(() => loadFosas());
+      }
+
+      // PAGOS
+      function loadPagos() {
+        fetch(`${API}/admin/pagos`, { headers: authHeaders() })
+          .then((r) => r.json())
+          .then((data) => {
+            const tbody = document.getElementById('tabla-pagos');
+            tbody.innerHTML = data
+              .map(
+                (p) => `
+          <tr>
+            <td title="${p.transaccion_id || ''}">${p.transaccion_id ? p.transaccion_id.slice(0, 8) + '...' : '—'}</td>
+            <td title="${p.inmueble_id}">${p.inmueble_id.slice(0, 8)}...</td>
+            <td>RD$${Number(p.monto).toLocaleString()}</td>
+            <td>${p.mes_facturado}</td>
+            <td>${badgeEstado(p.estado)}</td>
+          </tr>
+        `,
+              )
+              .join('');
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,7 +1,10 @@
 ﻿using CajaADN.Application.Services;
+using CajaADN.Domain.Enums;
+using CajaADN.Domain.Enums;
 using CajaADN.Domain.Interfaces;
 using CajaADN.Integration.Data;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 namespace CajaADN.UI.Forms;
 
@@ -11,13 +14,15 @@ public class FrmPrincipal : Form
     private readonly CobroService _cobroService;
     private readonly IAuthService _authService;
     private readonly IDbContextFactory<CajaDbContext> _dbFactory;
+    private readonly RolUsuario _rol;   // ← nuevo
 
-    public FrmPrincipal(SesionService sesionService, CobroService cobroService, IAuthService authService, IDbContextFactory<CajaDbContext> dbFactory)
+    public FrmPrincipal(SesionService sesionService, CobroService cobroService, IAuthService authService, IDbContextFactory<CajaDbContext> dbFactory, RolUsuario rol)
     {
         _sesionService = sesionService;
         _cobroService = cobroService;
         _authService = authService;
         _dbFactory = dbFactory;
+        _rol = rol;
 
         Text = $"Caja ADN — Cajero: {sesionService.SesionActual!.UsuarioCajero}";
         WindowState = FormWindowState.Maximized;
@@ -32,13 +37,13 @@ public class FrmPrincipal : Form
         panel.Controls.Add(btnCobro);
 
         var btnHistorial = UiTheme.BotonMenu("🧾  Historial / Reimprimir / Anular");
-        btnHistorial.Click += (_, _) => new FrmHistorialPagos(_sesionService, _cobroService, _authService, _dbFactory).ShowDialog(this);
+        btnHistorial.Click += (_, _) => new FrmHistorialPagos(_sesionService, _cobroService, _authService, _dbFactory, _rol).ShowDialog(this);
         panel.Controls.Add(btnHistorial);
 
         var btnCierre = UiTheme.BotonMenu("🔒  Cerrar Turno");
         btnCierre.Click += (_, _) =>
         {
-            if (new FrmCierreSesion(_sesionService).ShowDialog(this) == DialogResult.OK) Close();
+            if (new FrmCierreSesion(_sesionService, _dbFactory).ShowDialog(this) == DialogResult.OK) Close();
         };
         panel.Controls.Add(btnCierre);
 

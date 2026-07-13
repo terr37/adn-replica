@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "mWEXM5t51ZA=",
+  "dgSpecHash": "TCxDRmUAUNE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.UI\\CajaADN.UI.csproj",
+  "projectFilePath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\CajaADN.UI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UserGPC\\.nuget\\packages\\bitfaster.caching\\2.5.4\\bitfaster.caching.2.5.4.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
@@ -57,20 +56,19 @@
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus\\10.2.7\\nservicebus.10.2.7.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.extensions.hosting\\4.1.0\\nservicebus.extensions.hosting.4.1.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.messageinterfaces\\1.0.0\\nservicebus.messageinterfaces.1.0.0.nupkg.sha512",
-    "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.rabbitmq\\11.2.1\\nservicebus.rabbitmq.11.2.1.nupkg.sha512",
-    "C:\\Users\\UserGPC\\.nuget\\packages\\rabbitmq.client\\7.2.1\\rabbitmq.client.7.2.1.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\stackexchange.redis\\2.8.24\\stackexchange.redis.2.8.24.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.attributedmodel\\9.0.0\\system.composition.attributedmodel.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.convention\\9.0.0\\system.composition.convention.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.hosting\\9.0.0\\system.composition.hosting.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
-    "C:\\Users\\UserGPC\\.nuget\\packages\\system.io.hashing\\10.0.9\\system.io.hashing.10.0.9.nupkg.sha512",
-    "C:\\Users\\UserGPC\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
+    "C:\\Users\\UserGPC\\.nuget\\packages\\system.io.hashing\\10.0.9\\system.io.hashing.10.0.9.nupkg.sha512"
   ],
   "logs": []
 }

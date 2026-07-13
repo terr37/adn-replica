@@ -17,13 +17,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NServiceBus.Extensions.Hosting" Version="4.1.0" />
-    <PackageReference Include="NServiceBus.RabbitMQ" Version="11.2.1" />
+	  <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CajaADN.Contracts\CajaADN.Contracts.csproj" />
     <ProjectReference Include="..\CajaADN.Domain\CajaADN.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handlers\" />
   </ItemGroup>
 
 </Project>

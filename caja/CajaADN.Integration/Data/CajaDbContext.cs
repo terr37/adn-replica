@@ -42,14 +42,5 @@ public class CajaDbContext : DbContext
         });
 
         modelBuilder.Entity<InmuebleCatastro>(e => e.HasKey(x => x.InmuebleId));
-
-        modelBuilder.Entity<InmuebleCatastro>().HasData(
-            new InmuebleCatastro { InmuebleId = "INM-00101", Direccion = "Av. Winston Churchill", Zona = "Piantini", TipoUso = "Residencial" },
-            new InmuebleCatastro { InmuebleId = "INM-00102", Direccion = "Av. Abraham Lincoln", Zona = "Piantini", TipoUso = "Comercial" },
-            new InmuebleCatastro { InmuebleId = "INM-00201", Direccion = "Calle Pasteur", Zona = "Gazcue", TipoUso = "Residencial" },
-            new InmuebleCatastro { InmuebleId = "INM-00202", Direccion = "Av. Independencia", Zona = "Gazcue", TipoUso = "Comercial" },
-            new InmuebleCatastro { InmuebleId = "INM-00301", Direccion = "Calle El Conde", Zona = "Zona Colonial", TipoUso = "Comercial" },
-            new InmuebleCatastro { InmuebleId = "INM-00302", Direccion = "Calle Las Damas", Zona = "Zona Colonial", TipoUso = "Residencial" }
-        );
     }
 }

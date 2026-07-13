@@ -12,19 +12,10 @@
           "CajaADN.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "10.0.9",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.9",
-          "NServiceBus.Extensions.Hosting": "4.1.0",
-          "NServiceBus.RabbitMQ": "11.2.1"
+          "StackExchange.Redis": "2.8.24"
         },
         "runtime": {
           "CajaADN.Integration.dll": {}
-        }
-      },
-      "BitFaster.Caching/2.5.4": {
-        "runtime": {
-          "lib/net6.0/BitFaster.Caching.dll": {
-            "assemblyVersion": "2.5.4.0",
-            "fileVersion": "2.5.4.0"
-          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -850,18 +841,6 @@
           }
         }
       },
-      "NServiceBus.Extensions.Hosting/4.1.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Hosting": "10.0.9",
-          "NServiceBus": "10.2.7"
-        },
-        "runtime": {
-          "lib/net10.0/NServiceBus.Extensions.Hosting.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.1.0.0"
-          }
-        }
-      },
       "NServiceBus.MessageInterfaces/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/NServiceBus.MessageInterfaces.dll": {
@@ -870,27 +849,11 @@
           }
         }
       },
-      "NServiceBus.RabbitMQ/11.2.1": {
-        "dependencies": {
-          "BitFaster.Caching": "2.5.4",
-          "NServiceBus": "10.2.7",
-          "RabbitMQ.Client": "7.2.1"
-        },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
         "runtime": {
-          "lib/net10.0/NServiceBus.Transport.RabbitMQ.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.2.1.0"
-          }
-        }
-      },
-      "RabbitMQ.Client/7.2.1": {
-        "dependencies": {
-          "System.Threading.RateLimiting": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/RabbitMQ.Client.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.2.1.0"
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
           }
         }
       },
@@ -1044,6 +1007,18 @@
           }
         }
       },
+      "StackExchange.Redis/2.8.24": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.9",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net8.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.8.24.3255"
+          }
+        }
+      },
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -1142,14 +1117,6 @@
           }
         }
       },
-      "System.Threading.RateLimiting/8.0.0": {
-        "runtime": {
-          "lib/net8.0/System.Threading.RateLimiting.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        }
-      },
       "CajaADN.Contracts/1.0.0": {
         "dependencies": {
           "NServiceBus": "10.2.7"
@@ -1176,13 +1143,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "BitFaster.Caching/2.5.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1QroTY1PVCZOSG9FnkkCrmCKk/+bZCgI/YXq376HnYwUDJ4Ho0EaV4YaA/5v5WYLnwIwIO7RZkdWbg9pxIpueQ==",
-      "path": "bitfaster.caching/2.5.4",
-      "hashPath": "bitfaster.caching.2.5.4.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1520,13 +1480,6 @@
       "path": "nservicebus/10.2.7",
       "hashPath": "nservicebus.10.2.7.nupkg.sha512"
     },
-    "NServiceBus.Extensions.Hosting/4.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vRBJ6sNv6XLALMORvoGpU/F2x8HBPBAZW+XRdcoihcQiCSEBteWVSzPG/NP0p1VzAyQn8pneuZWwRH1RsNV+aQ==",
-      "path": "nservicebus.extensions.hosting/4.1.0",
-      "hashPath": "nservicebus.extensions.hosting.4.1.0.nupkg.sha512"
-    },
     "NServiceBus.MessageInterfaces/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1534,19 +1487,12 @@
       "path": "nservicebus.messageinterfaces/1.0.0",
       "hashPath": "nservicebus.messageinterfaces.1.0.0.nupkg.sha512"
     },
-    "NServiceBus.RabbitMQ/11.2.1": {
+    "Pipelines.Sockets.Unofficial/2.2.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wh7QYUY7EmBFnYM+aChHokn9fEsxFuxjg92WxngWKPYQ+9PHTlvo95+r+xTTtZmbqEVH21p6Z5j/5gB0XM5vLQ==",
-      "path": "nservicebus.rabbitmq/11.2.1",
-      "hashPath": "nservicebus.rabbitmq.11.2.1.nupkg.sha512"
-    },
-    "RabbitMQ.Client/7.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YKXEfg9fVQiTKgZlvIhAfPSFaamEgi8DsQmisCH0IAsU4FYLrtoguDrDj6JtJVGUt40QPnBLRH6fTQcAC4qsOg==",
-      "path": "rabbitmq.client/7.2.1",
-      "hashPath": "rabbitmq.client.7.2.1.nupkg.sha512"
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.11": {
       "type": "package",
@@ -1575,6 +1521,13 @@
       "sha512": "sha512-Y/0ZkR+r0Cg3DQFuCl1RBnv/tmxpIZRU3HUvelPw6MVaKHwYYR8YNvgs0vuNuXCMvlyJ+Fh88U1D4tah1tt6qw==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.11",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.8.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GWllmsFAtLyhm4C47cOCipGxyEi1NQWTFUHXnJ8hiHOsK/bH3T5eLkWPVW+LRL6jDiB3g3izW3YEHgLuPoJSyA==",
+      "path": "stackexchange.redis/2.8.24",
+      "hashPath": "stackexchange.redis.2.8.24.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -1638,13 +1591,6 @@
       "sha512": "sha512-vixglGnKEexAJDeIRhyayZYzxyrgK1K9GU3K/zRZVwDbaDcMkSqj4WDHoVmQMNfsdUtLALfNSJw6mBIpdxie4A==",
       "path": "system.io.hashing/10.0.9",
       "hashPath": "system.io.hashing.10.0.9.nupkg.sha512"
-    },
-    "System.Threading.RateLimiting/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
-      "path": "system.threading.ratelimiting/8.0.0",
-      "hashPath": "system.threading.ratelimiting.8.0.0.nupkg.sha512"
     },
     "CajaADN.Contracts/1.0.0": {
       "type": "project",

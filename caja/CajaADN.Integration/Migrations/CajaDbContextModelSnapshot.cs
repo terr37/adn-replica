@@ -37,50 +37,6 @@ namespace CajaADN.Integration.Migrations
                     b.HasKey("InmuebleId");
 
                     b.ToTable("Catastro");
-
-                    b.HasData(
-                        new
-                        {
-                            InmuebleId = "INM-00101",
-                            Direccion = "Av. Winston Churchill",
-                            TipoUso = "Residencial",
-                            Zona = "Piantini"
-                        },
-                        new
-                        {
-                            InmuebleId = "INM-00102",
-                            Direccion = "Av. Abraham Lincoln",
-                            TipoUso = "Comercial",
-                            Zona = "Piantini"
-                        },
-                        new
-                        {
-                            InmuebleId = "INM-00201",
-                            Direccion = "Calle Pasteur",
-                            TipoUso = "Residencial",
-                            Zona = "Gazcue"
-                        },
-                        new
-                        {
-                            InmuebleId = "INM-00202",
-                            Direccion = "Av. Independencia",
-                            TipoUso = "Comercial",
-                            Zona = "Gazcue"
-                        },
-                        new
-                        {
-                            InmuebleId = "INM-00301",
-                            Direccion = "Calle El Conde",
-                            TipoUso = "Comercial",
-                            Zona = "Zona Colonial"
-                        },
-                        new
-                        {
-                            InmuebleId = "INM-00302",
-                            Direccion = "Calle Las Damas",
-                            TipoUso = "Residencial",
-                            Zona = "Zona Colonial"
-                        });
                 });
 
             modelBuilder.Entity("CajaADN.Domain.Models.SesionCaja", b =>

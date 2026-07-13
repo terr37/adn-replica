@@ -11,6 +11,15 @@ public class FrmCobro : Form
     private readonly CobroService _cobroService;
     private readonly IDbContextFactory<CajaDbContext> _dbFactory;
 
+    // Envuelve el enum para poder mostrar un texto legible en el ComboBox
+    // sin perder el valor real de TipoPago.
+    private class OpcionTipoPago
+    {
+        public TipoPago Valor { get; init; }
+        public string Etiqueta { get; init; } = string.Empty;
+        public override string ToString() => Etiqueta;
+    }
+
     private readonly ComboBox _cmbTipo = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill };
     private readonly ComboBox _cmbInmueble = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, DisplayMember = "InmuebleId" };
     private readonly TextBox _txtReferenciaId = new() { Dock = DockStyle.Fill };
@@ -25,10 +34,16 @@ public class FrmCobro : Form
 
         Text = "Cobro de Tasas Municipales";
         StartPosition = FormStartPosition.CenterParent;
-        Size = new Size(480, 420);
+        Size = new Size(500, 440);
 
         var tlp = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, Padding = new Padding(16) };
-        _cmbTipo.Items.AddRange(Enum.GetValues<TipoPago>().Cast<object>().ToArray());
+
+        var opciones = Enum.GetValues<TipoPago>()
+            .Select(t => new OpcionTipoPago { Valor = t, Etiqueta = t.NombreVisible() })
+            .OrderBy(o => o.Etiqueta)
+            .ToList();
+        _cmbTipo.DataSource = opciones;
+        _cmbTipo.DisplayMember = "Etiqueta";
         _cmbTipo.SelectedIndexChanged += (_, _) => ActualizarVisibilidadCampos();
         tlp.Controls.Add(new Label { Text = "Tipo de pago:" }, 0, 0);
         tlp.Controls.Add(_cmbTipo, 1, 0);
@@ -37,7 +52,7 @@ public class FrmCobro : Form
         _cmbInmueble.SelectedIndexChanged += (_, _) => CalcularMontoAseo();
         tlp.Controls.Add(_cmbInmueble, 1, 1);
 
-        tlp.Controls.Add(new Label { Text = "Referencia (solicitud/fosa):" }, 0, 2);
+        tlp.Controls.Add(new Label { Text = "Referencia (solicitud/fosa/etc.):" }, 0, 2);
         tlp.Controls.Add(_txtReferenciaId, 1, 2);
 
         tlp.Controls.Add(new Label { Text = "Nombre contribuyente:" }, 0, 3);
@@ -52,25 +67,29 @@ public class FrmCobro : Form
 
         Controls.Add(tlp);
         Load += async (_, _) => await CargarCatastroAsync();
-        _cmbTipo.SelectedIndex = 0;
     }
+
+    private TipoPago TipoSeleccionado => ((OpcionTipoPago)_cmbTipo.SelectedItem!).Valor;
 
     private async Task CargarCatastroAsync()
     {
         var lista = await _cobroService.ObtenerCatastroAsync();
         _cmbInmueble.DataSource = lista.ToList();
+        ActualizarVisibilidadCampos();
     }
 
     private void ActualizarVisibilidadCampos()
     {
-        var esAseo = (TipoPago)_cmbTipo.SelectedItem! == TipoPago.PAGO_ASEO_URBANO;
+        if (_cmbTipo.SelectedItem is null) return;
+        var esAseo = TipoSeleccionado == TipoPago.PAGO_ASEO_URBANO;
         _cmbInmueble.Enabled = esAseo;
-        _txtMonto.Enabled = !esAseo;
+        _txtMonto.Enabled = true; // siempre editable; el cálculo de Aseo es solo una sugerencia
         if (esAseo) CalcularMontoAseo();
     }
 
     private void CalcularMontoAseo()
     {
+        if (_cmbTipo.SelectedItem is null || TipoSeleccionado != TipoPago.PAGO_ASEO_URBANO) return;
         if (_cmbInmueble.SelectedItem is InmuebleCatastro inmueble)
         {
             _txtReferenciaId.Text = inmueble.InmuebleId;
@@ -92,8 +111,7 @@ public class FrmCobro : Form
         _btnCobrar.Enabled = false;
         try
         {
-            var tipo = (TipoPago)_cmbTipo.SelectedItem!;
-            var transaccion = await _cobroService.CobrarAsync(tipo, _txtReferenciaId.Text.Trim(), _txtNombre.Text.Trim(), monto);
+            var transaccion = await _cobroService.CobrarAsync(TipoSeleccionado, _txtReferenciaId.Text.Trim(), _txtNombre.Text.Trim(), monto);
 
             await using (var db = await _dbFactory.CreateDbContextAsync())
             {
@@ -102,7 +120,7 @@ public class FrmCobro : Form
             }
 
             MessageBox.Show(
-                $"COBRADO ✔\n\nNCF: {transaccion.NcfSimulado}\nMonto: RD$ {transaccion.Monto:N2}\n\n" +
+                $"COBRADO ✔\n\nServicio: {TipoSeleccionado.NombreVisible()}\nNCF: {transaccion.NcfSimulado}\nMonto: RD$ {transaccion.Monto:N2}\n\n" +
                 "Se sincronizará con Integración automáticamente.",
                 "Recibo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

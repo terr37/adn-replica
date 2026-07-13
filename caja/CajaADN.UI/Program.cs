@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StackExchange.Redis;
 
 namespace CajaADN.UI;
 
@@ -29,11 +30,6 @@ internal static class Program
 
         ConfigurarServicios(builder.Services, builder.Configuration);
 
-        var endpointConfiguration = CajaEndpointFactory.Crear(
-            builder.Configuration["RabbitMQ:ConnectionString"]!,
-            builder.Configuration["Integracion:NombreEndpoint"]!);
-        builder.UseNServiceBus(endpointConfiguration);
-
         _host = builder.Build();
 
         try
@@ -42,8 +38,7 @@ internal static class Program
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"No se pudo iniciar el bus de mensajería (RabbitMQ).\n\n{ex.Message}\n\n" +
-                "La Caja puede seguir cobrando en modo offline.",
+            MessageBox.Show($"No se pudo conectar con Redis.\n\n{ex.Message}\n\nLa Caja puede seguir cobrando en modo offline.",
                 "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
@@ -62,7 +57,8 @@ internal static class Program
                     ServiceProvider.GetRequiredService<SesionService>(),
                     ServiceProvider.GetRequiredService<CobroService>(),
                     ServiceProvider.GetRequiredService<IAuthService>(),
-                    ServiceProvider.GetRequiredService<IDbContextFactory<CajaDbContext>>());
+                    ServiceProvider.GetRequiredService<IDbContextFactory<CajaDbContext>>(),
+                    frmLogin.Rol!.Value);
                 System.Windows.Forms.Application.Run(frmPrincipal);
             }
         }
@@ -75,13 +71,15 @@ internal static class Program
         var dbPath = Path.Combine(AppContext.BaseDirectory, config.GetConnectionString("CajaLocalDb")!);
         services.AddDbContextFactory<CajaDbContext>(o => o.UseSqlite($"Data Source={dbPath}"));
 
-        services.AddSingleton<PendingRequestCorrelator>();
+        services.AddSingleton<IConnectionMultiplexer>(sp =>
+    ConnectionMultiplexer.Connect(config["Redis:ConnectionString"]!));
         services.AddSingleton<IAuthService, DbAuthService>();
         services.AddSingleton<ICatastroService, DbCatastroService>();
-        services.AddSingleton<IPagoService, NsbPagoService>();
+        services.AddSingleton<IPagoService, RedisPagoService>();
         services.AddSingleton<SesionService>();
         services.AddTransient<CobroService>();
         services.AddHostedService<SincronizacionOfflineService>();
+        services.AddHostedService<CatastroSyncService>();
     }
 
     private static void AplicarMigracionesYSemilla()

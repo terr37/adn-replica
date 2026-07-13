@@ -13,6 +13,7 @@ public class FrmHistorialPagos : Form
     private readonly CobroService _cobroService;
     private readonly IAuthService _authService;
     private readonly IDbContextFactory<CajaDbContext> _dbFactory;
+    private readonly RolUsuario _rol;
 
     private readonly DataGridView _dgv = new()
     {
@@ -25,19 +26,22 @@ public class FrmHistorialPagos : Form
         MultiSelect = false,
     };
 
-    public FrmHistorialPagos(SesionService sesionService, CobroService cobroService, IAuthService authService, IDbContextFactory<CajaDbContext> dbFactory)
+    public FrmHistorialPagos(SesionService sesionService, CobroService cobroService, IAuthService authService, IDbContextFactory<CajaDbContext> dbFactory, RolUsuario rol)
     {
         _sesionService = sesionService;
         _cobroService = cobroService;
         _authService = authService;
         _dbFactory = dbFactory;
+        _rol = rol;
 
         Text = "Historial del Turno";
         StartPosition = FormStartPosition.CenterParent;
         Size = new Size(920, 560);
         BackColor = UiTheme.FondoClaro;
 
-        Controls.Add(UiTheme.CrearHeader("Historial / Reimprimir / Anular"));
+        Controls.Add(UiTheme.CrearHeader(_rol == RolUsuario.Supervisor
+           ? "Historial completo (todos los turnos)"
+           : "Historial / Reimprimir / Anular"));
 
         _dgv.Top = 64;
         _dgv.Height = Height - 64 - 64;
@@ -56,7 +60,7 @@ public class FrmHistorialPagos : Form
         var pnlBotones = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 56, Padding = new Padding(8) };
         var btnReimprimir = UiTheme.BotonPrimario("Reimprimir recibo");
         btnReimprimir.Width = 200;
-        btnReimprimir.Click += (_, _) => Reimprimir();
+        btnReimprimir.Click += async (_, _) => await Reimprimir();
 
         var btnAnular = UiTheme.BotonPrimario("Anular (supervisor)");
         btnAnular.Width = 220;
@@ -73,10 +77,58 @@ public class FrmHistorialPagos : Form
         Controls.Add(pnlBotones);
 
         CargarGrid();
+
+        Load += async (_, _) => await CargarGridAsync();
     }
 
-    private void CargarGrid()
+    private async Task CargarGridAsync()
     {
+        await using var db = await _dbFactory.CreateDbContextAsync();
+
+        var query = db.Transacciones.AsQueryable();
+
+        if (_rol != RolUsuario.Supervisor)
+        {
+            query = query.Where(t => t.IdSesion == _sesionService.SesionActual!.IdSesion);
+        }
+
+        // Trae los datos SIN ordenar en el SQL (SQLite no soporta ORDER BY sobre DateTimeOffset)
+        var transacciones = await query.ToListAsync();
+
+        // Ordena en memoria, ya como objetos .NET
+        var ordenadas = transacciones.OrderByDescending(t => t.TimestampLocal).ToList();
+
+        _dgv.Rows.Clear();
+        foreach (var t in ordenadas)
+        {
+            _dgv.Rows.Add(
+                t.TransaccionId, t.TimestampLocal.ToString("HH:mm:ss"), t.NombreContribuyente,
+                t.Tipo, t.Monto.ToString("N2"), t.NcfSimulado,
+                t.Estado == EstadoPago.Anulado ? "ANULADO" : "Pagado",
+                t.Sincronizado ? "✔" : "Pendiente");
+        }
+    }
+
+    private async void CargarGrid()
+    {
+        // Refresca el estado real desde la BD hacia los objetos en memoria de la sesión
+        await using (var db = await _dbFactory.CreateDbContextAsync())
+        {
+            var ids = _sesionService.SesionActual!.Transacciones.Select(t => t.TransaccionId).ToList();
+            var estados = await db.Transacciones
+                .Where(t => ids.Contains(t.TransaccionId))
+                .ToDictionaryAsync(t => t.TransaccionId, t => new { t.Sincronizado, t.Estado });
+
+            foreach (var t in _sesionService.SesionActual!.Transacciones)
+            {
+                if (estados.TryGetValue(t.TransaccionId, out var real))
+                {
+                    t.Sincronizado = real.Sincronizado;
+                    t.Estado = real.Estado;
+                }
+            }
+        }
+
         _dgv.Rows.Clear();
         foreach (var t in _sesionService.SesionActual!.Transacciones.OrderByDescending(t => t.TimestampLocal))
         {
@@ -88,16 +140,17 @@ public class FrmHistorialPagos : Form
         }
     }
 
-    private Transaccion? ObtenerSeleccionada()
+    private async Task<Transaccion?> ObtenerSeleccionadaAsync()
     {
         if (_dgv.SelectedRows.Count == 0) return null;
         var id = (Guid)_dgv.SelectedRows[0].Cells["TransaccionId"].Value!;
-        return _sesionService.SesionActual!.Transacciones.FirstOrDefault(t => t.TransaccionId == id);
+        await using var db = await _dbFactory.CreateDbContextAsync();
+        return await db.Transacciones.FindAsync(id);
     }
 
-    private void Reimprimir()
+    private async Task Reimprimir()
     {
-        var t = ObtenerSeleccionada();
+        var t = await ObtenerSeleccionadaAsync();
         if (t is null) { MessageBox.Show("Selecciona una transacción."); return; }
 
         MessageBox.Show(
@@ -113,9 +166,14 @@ public class FrmHistorialPagos : Form
             "Recibo", MessageBoxButtons.OK, MessageBoxIcon.None);
     }
 
+    private void InitializeComponent()
+    {
+
+    }
+
     private async Task AnularAsync()
     {
-        var t = ObtenerSeleccionada();
+        var t = await ObtenerSeleccionadaAsync();
         if (t is null) { MessageBox.Show("Selecciona una transacción."); return; }
         if (t.Estado == EstadoPago.Anulado) { MessageBox.Show("Ya está anulada."); return; }
 
@@ -124,8 +182,6 @@ public class FrmHistorialPagos : Form
 
         try
         {
-            _cobroService.AnularTransaccion(t, dlg.UsuarioAutoriza, dlg.Motivo);
-
             await using var db = await _dbFactory.CreateDbContextAsync();
             var entidad = await db.Transacciones.FindAsync(t.TransaccionId);
             if (entidad is not null)
@@ -135,7 +191,7 @@ public class FrmHistorialPagos : Form
             }
 
             MessageBox.Show("Transacción anulada.", "Anulación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CargarGrid();
+            await CargarGridAsync();
         }
         catch (Exception ex)
         {

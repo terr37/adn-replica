@@ -13,3 +13,19 @@ C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Applicatio
 C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Application\obj\Debug\net10.0\refint\CajaADN.Application.dll
 C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.pdb
 C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Application\obj\Debug\net10.0\ref\CajaADN.Application.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\bin\Debug\net10.0\CajaADN.Application.deps.json
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\bin\Debug\net10.0\CajaADN.Application.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\bin\Debug\net10.0\CajaADN.Application.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\bin\Debug\net10.0\CajaADN.Domain.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\bin\Debug\net10.0\CajaADN.Domain.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.csproj.AssemblyReference.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.AssemblyInfoInputs.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.AssemblyInfo.cs
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.csproj.CoreCompileInputs.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.sourcelink.json
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN..0E014A49.Up2Date
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\refint\CajaADN.Application.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\CajaADN.Application.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Application\obj\Debug\net10.0\ref\CajaADN.Application.dll

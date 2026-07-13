@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CajaADN.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+881849926f4305e3a595a1f5cc141f8ff9c0ee27")]
 [assembly: System.Reflection.AssemblyProductAttribute("CajaADN.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CajaADN.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

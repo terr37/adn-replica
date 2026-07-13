@@ -1,0 +1,39 @@
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.deps.json
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.runtimeconfig.json
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.dll
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.pdb
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Contracts.dll
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Domain.dll
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Contracts.pdb
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Domain.pdb
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.csproj.AssemblyReference.cache
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.AssemblyInfoInputs.cache
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.AssemblyInfo.cs
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.csproj.CoreCompileInputs.cache
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN..EBF0A7BF.Up2Date
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.dll
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\refint\CajaADN.Integration.dll
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.pdb
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.genruntimeconfig.cache
+C:\Users\UserGPC\Documents\Tarea de la universidad\CajaADN.UI\CajaADN.Integration\obj\Debug\net10.0\ref\CajaADN.Integration.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.deps.json
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.runtimeconfig.json
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Integration.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Contracts.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Domain.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Contracts.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\bin\Debug\net10.0\CajaADN.Domain.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.csproj.AssemblyReference.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.AssemblyInfoInputs.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.AssemblyInfo.cs
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.csproj.CoreCompileInputs.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.sourcelink.json
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN..EBF0A7BF.Up2Date
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\refint\CajaADN.Integration.dll
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.pdb
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\CajaADN.Integration.genruntimeconfig.cache
+C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Integration\obj\Debug\net10.0\ref\CajaADN.Integration.dll

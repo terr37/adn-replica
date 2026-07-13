@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="CajaADN.Application/CajaADN.Application.csproj" />
+  <Project Path="CajaADN.Contracts/CajaADN.Contracts.csproj" />
+  <Project Path="CajaADN.Domain/CajaADN.Domain.csproj" />
+  <Project Path="CajaADN.Integration/CajaADN.Integration.csproj" />
+  <Project Path="CajaADN.UI/CajaADN.UI.csproj" />
+</Solution>

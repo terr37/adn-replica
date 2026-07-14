@@ -18,4 +18,7 @@ public class Transaccion
     public bool Sincronizado { get; set; } = false;
     public int IntentosSincronizacion { get; set; }
     public DateTime? UltimoIntentoSincronizacion { get; set; }
+
+    public string Cedula { get; set; } = string.Empty;   // ← nuevo
+    public MetodoPago MetodoPago { get; set; } = MetodoPago.Efectivo;
 }

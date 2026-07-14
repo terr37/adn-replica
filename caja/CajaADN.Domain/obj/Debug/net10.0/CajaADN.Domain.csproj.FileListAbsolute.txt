@@ -21,3 +21,15 @@ C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0
 C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\refint\CajaADN.Domain.dll
 C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.pdb
 C:\Users\Tuparita\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\ref\CajaADN.Domain.dll
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\bin\Debug\net10.0\CajaADN.Domain.deps.json
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\bin\Debug\net10.0\CajaADN.Domain.dll
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\bin\Debug\net10.0\CajaADN.Domain.pdb
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.AssemblyInfoInputs.cache
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.AssemblyInfo.cs
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.csproj.CoreCompileInputs.cache
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.sourcelink.json
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.dll
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\refint\CajaADN.Domain.dll
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\CajaADN.Domain.pdb
+C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Domain\obj\Debug\net10.0\ref\CajaADN.Domain.dll

@@ -1,0 +1,11 @@
+═══════════════════════════════
+     CUADRE DE CAJA — TURNO
+═══════════════════════════════
+Cajero:            supervisor1
+Apertura:          13/07/2026 20:34
+Cierre:            13/07/2026 20:35
+Efectivo inicial:  RD$ 5,000.00
+Total cobrado:     RD$ 300.00
+Transacciones:     1 pagadas / 0 anuladas
+Efectivo esperado: RD$ 5,300.00
+═══════════════════════════════

@@ -8,10 +8,10 @@ public class SesionService
     public SesionCaja? SesionActual { get; private set; }
     public bool HaySesionAbierta => SesionActual?.Estado == EstadoSesion.Abierta;
 
-    public SesionCaja AbrirSesion(string usuario)
+    public SesionCaja AbrirSesion(string usuario, decimal efectivoInicial)
     {
         if (HaySesionAbierta) throw new InvalidOperationException("Ya hay una sesión abierta.");
-        SesionActual = new SesionCaja { UsuarioCajero = usuario };
+        SesionActual = new SesionCaja { UsuarioCajero = usuario, EfectivoInicial = efectivoInicial };
         return SesionActual;
     }
 

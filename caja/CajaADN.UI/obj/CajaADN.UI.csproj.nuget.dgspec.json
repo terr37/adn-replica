@@ -1488,6 +1488,10 @@
             "NServiceBus.Extensions.Hosting": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.7.1, )"
             }
           },
           "imports": [

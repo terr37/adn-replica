@@ -19,6 +19,9 @@
     <Compile Update="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\FrmSimulacionTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\PromptAutorizacionDialog.cs">
       <SubType>Form</SubType>
     </Compile>

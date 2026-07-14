@@ -39,6 +39,7 @@ public class CajaDbContext : DbContext
             e.HasKey(x => x.TransaccionId);
             e.Property(x => x.Tipo).HasConversion<string>();
             e.Property(x => x.Estado).HasConversion<string>();
+            e.Property(x => x.MetodoPago).HasConversion<string>();   // ← nuevo
         });
 
         modelBuilder.Entity<InmuebleCatastro>(e => e.HasKey(x => x.InmuebleId));

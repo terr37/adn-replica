@@ -1,6 +1,5 @@
 ﻿using CajaADN.Domain.Enums;
-
-namespace CajaADN.Domain.Models;
+using CajaADN.Domain.Models;
 
 public class SesionCaja
 {
@@ -9,5 +8,6 @@ public class SesionCaja
     public DateTime FechaApertura { get; set; } = DateTime.Now;
     public DateTime? FechaCierre { get; set; }
     public EstadoSesion Estado { get; set; } = EstadoSesion.Abierta;
+    public decimal EfectivoInicial { get; set; }          // ← nuevo
     public List<Transaccion> Transacciones { get; set; } = [];
 }

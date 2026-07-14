@@ -39,34 +39,14 @@ namespace CajaADN.Integration.Migrations
                     b.ToTable("Catastro");
                 });
 
-            modelBuilder.Entity("CajaADN.Domain.Models.SesionCaja", b =>
-                {
-                    b.Property<Guid>("IdSesion")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Estado")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("FechaApertura")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("FechaCierre")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UsuarioCajero")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("IdSesion");
-
-                    b.ToTable("Sesiones");
-                });
-
             modelBuilder.Entity("CajaADN.Domain.Models.Transaccion", b =>
                 {
                     b.Property<Guid>("TransaccionId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Cedula")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Estado")
@@ -78,6 +58,10 @@ namespace CajaADN.Integration.Migrations
 
                     b.Property<int>("IntentosSincronizacion")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("MetodoPago")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Moneda")
                         .IsRequired()
@@ -144,6 +128,33 @@ namespace CajaADN.Integration.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("SesionCaja", b =>
+                {
+                    b.Property<Guid>("IdSesion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("EfectivoInicial")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Estado")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("FechaApertura")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("FechaCierre")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UsuarioCajero")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdSesion");
+
+                    b.ToTable("Sesiones");
                 });
 #pragma warning restore 612, 618
         }

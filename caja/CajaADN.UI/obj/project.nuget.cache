@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TCxDRmUAUNE=",
+  "dgSpecHash": "G/7w5SsJg/o=",
   "success": true,
   "projectFilePath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.UI\\CajaADN.UI.csproj",
   "expectedPackageFiles": [
@@ -57,6 +57,7 @@
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.extensions.hosting\\4.1.0\\nservicebus.extensions.hosting.4.1.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.messageinterfaces\\1.0.0\\nservicebus.messageinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\questpdf\\2026.7.1\\questpdf.2026.7.1.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",

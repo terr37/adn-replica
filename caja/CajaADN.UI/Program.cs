@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StackExchange.Redis;
-
+using QuestPDF.Infrastructure;
 namespace CajaADN.UI;
 
 internal static class Program
@@ -21,6 +21,7 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
+        QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
         ApplicationConfiguration.Initialize();
 
         Directory.CreateDirectory(Path.Combine(AppContext.BaseDirectory, "Data"));
@@ -51,7 +52,7 @@ internal static class Program
             if (frmApertura.ShowDialog() == DialogResult.OK)
             {
                 ServiceProvider.GetRequiredService<SesionService>()
-                    .AbrirSesion(frmLogin.Usuario!);
+        .AbrirSesion(frmLogin.Usuario!, frmApertura.EfectivoInicial);   
 
                 using var frmPrincipal = new FrmPrincipal(
                     ServiceProvider.GetRequiredService<SesionService>(),

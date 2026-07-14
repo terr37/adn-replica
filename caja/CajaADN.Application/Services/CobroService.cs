@@ -21,7 +21,7 @@ public class CobroService
     private static int _consecutivoNcf = 100;
     private static string GenerarNcfSimulado() => $"B02{System.Threading.Interlocked.Increment(ref _consecutivoNcf):D8}";
 
-    public Task<Transaccion> CobrarAsync(TipoPago tipo, string referenciaId, string nombreContribuyente, decimal monto)
+    public Task<Transaccion> CobrarAsync(TipoPago tipo, string referenciaId, string nombreContribuyente, string cedula, decimal monto, MetodoPago metodoPago)
     {
         var sesion = _sesionService.SesionActual ?? throw new InvalidOperationException("No hay sesión abierta.");
 
@@ -31,6 +31,8 @@ public class CobroService
             Tipo = tipo,
             ReferenciaId = referenciaId,
             NombreContribuyente = nombreContribuyente,
+            Cedula = cedula,                     // ← nuevo
+            MetodoPago = metodoPago,
             Monto = monto,
             NcfSimulado = GenerarNcfSimulado(),
             TimestampLocal = DateTimeOffset.Now,

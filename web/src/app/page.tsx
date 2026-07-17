@@ -1,5 +1,7 @@
 'use client';
 
+import { Suspense } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { HeroSection } from '../core/components/HeroSection';
@@ -9,15 +11,28 @@ import { useGetIncidences } from '../features/incidences/presentation/hooks/useG
 import { ArrowRight, Users, ChevronRight, Building2, Recycle, Trees, TreeDeciduousIcon } from 'lucide-react';
 import { ScrollReveal } from '../core/components/ScrollReveal';
 
+// IMPORTA TU MODAL DE HISTORIAL (Ajusta la ruta si es necesario)
+import { PaymentHistoryModal } from '../features/payments/presentation/components/PaymentHistoryModal';
+
 // Dynamic import for Leaflet map with SSR disabled
 const IncidentMap = dynamic(
   () => import('../features/incidences/presentation/components/IncidentMap').then((mod) => mod.IncidentMap),
   { ssr: false, loading: () => <div className="h-[500px] bg-gray-100 rounded-2xl animate-pulse"></div> }
 );
 
-export default function Home() {
+function HomeContent() {
   const { data: catalogData, isLoading: isLoadingCatalog } = useGetCatalog();
   const { data: incidencesData, isLoading: isLoadingIncidences } = useGetIncidences();
+
+  // CONTROLADORES DE RUTA Y PARÁMETROS
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const activeModal = searchParams.get('modal');
+
+  const closeModals = () => {
+    // Al limpiar la URL volviendo a '/', el modal se desmontará solo
+    router.push('/');
+  };
 
   return (
     <div className="w-full bg-white flex flex-col">
@@ -42,7 +57,7 @@ export default function Home() {
             {isLoadingCatalog ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-pulse">
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="h-64 bg-gray-100 rounded-2xl cursor:pointer"></div>
+                  <div key={i} className="h-64 bg-gray-100 rounded-2xl"></div>
                 ))}
               </div>
             ) : (
@@ -70,7 +85,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               {/* Planificación Urbana */}
-              <div className="lg:col-span-8 bg-cover bg-center rounded-3xl relative overflow-hidden min-h-[320px] group shadow-sm flex flex-col justify-end p-8" style={{ backgroundImage: "url('https://i.pinimg.com/1200x/df/8d/01/df8d0153dbbfde677ed0208283e4eed8.jpg" }}>
+              <div className="lg:col-span-8 bg-cover bg-center rounded-3xl relative overflow-hidden min-h-[320px] group shadow-sm flex flex-col justify-end p-8" style={{ backgroundImage: "url('https://i.pinimg.com/1200x/df/8d/01/df8d0153dbbfde677ed0208283e4eed8.jpg')" }}>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
                 <div className="relative z-10 text-white">
                   <div className="w-10 h-10 bg-navy/80 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4">
@@ -154,6 +169,18 @@ export default function Home() {
           )}
         </section>
       </ScrollReveal>
+
+      {/* DETECTOR DE MODALES ACTIVOS */}
+      {activeModal === 'history' && <PaymentHistoryModal />}
     </div>
+  );
+}
+
+// Exportación obligatoria envuelta en Suspense para manejar searchParams en cliente
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center text-navy font-bold">Cargando Portal...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }

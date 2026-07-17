@@ -2,55 +2,66 @@
 
 import { useState, useEffect } from 'react';
 import { TaxEntity } from '../../domain/TaxEntity';
+import { obtenerCatalogoServicios, ServicioCatalogResponse } from '@/core/infrastructure/apiClient';
 
-const MOCK_CATALOG: TaxEntity[] = [
-  {
-    id: '1',
-    title: 'Permisos de Construcción',
-    description: 'Autorización para inicio de obras y modificaciones estructurales mayores.',
-    price: 2500,
-    iconName: 'Building2'
-  },
-  {
-    id: '2',
-    title: 'Recolección Especial',
-    description: 'Servicio programado para escombros o residuos voluminosos.',
-    price: 800,
-    iconName: 'Recycle'
-  },
-  {
-    id: '3',
-    title: 'Uso de Espacio Público',
-    description: 'Permisos temporales para eventos o actividades comerciales.',
-    price: 1200,
-    iconName: 'Tent'
-  },
-  {
-    id: '4',
-    title: 'Registro Comercial',
-    description: 'Inscripción y renovación de patentes municipales para negocios.',
-    price: 5000,
-    iconName: 'Store'
-  },
-  { id: '5', title: 'Certificación de No Objeción', description: 'Documento para operaciones comerciales.', price: 1500, iconName: 'FileCheck' },
-  { id: '6', title: 'Solicitud de Poda', description: 'Gestión para mantenimiento de árboles.', price: 300, iconName: 'Trees' },
-  { id: '7', title: 'Placa de Numeración', description: 'Solicitud de numeración de inmuebles.', price: 450, iconName: 'MapPin' },
-  { id: '8', title: 'Publicidad Exterior', description: 'Permisos para letreros y vallas.', price: 3000, iconName: 'Image' }
-];
+// ============================================================================
+// Category → Lucide icon name mapper
+// The API returns a `categoria` string; TaxCard expects a Lucide icon name.
+// ============================================================================
+const CATEGORY_ICON_MAP: Record<string, string> = {
+  construccion: 'Building2',
+  ambiental: 'Recycle',
+  comercial: 'Store',
+  documentos: 'FileCheck',
+  vial: 'ShieldAlert',
+  parques: 'Trees',
+  publicidad: 'Image',
+  numeracion: 'MapPin',
+};
 
+const mapServicioToTaxEntity = (s: ServicioCatalogResponse): TaxEntity => ({
+  id: s.id,
+  title: s.nombre,
+  description: s.descripcion,
+  price: s.monto_base,
+  iconName: CATEGORY_ICON_MAP[s.categoria.toLowerCase()] ?? 'FileText',
+});
+
+// ============================================================================
+// Hook
+// ============================================================================
 export const useGetCatalog = () => {
   const [data, setData] = useState<TaxEntity[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Simulate network delay
-    const timer = setTimeout(() => {
-      setData(MOCK_CATALOG);
-      setIsLoading(false);
-    }, 600);
+    let cancelled = false;
 
-    return () => clearTimeout(timer);
+    const fetchCatalog = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const raw = await obtenerCatalogoServicios();
+        if (!cancelled) {
+          setData(raw.map(mapServicioToTaxEntity));
+        }
+      } catch (err: unknown) {
+        if (!cancelled) {
+          const message =
+            err instanceof Error
+              ? err.message
+              : (err as { message?: string })?.message ?? 'Error cargando el catálogo.';
+          setError(message);
+        }
+      } finally {
+        if (!cancelled) setIsLoading(false);
+      }
+    };
+
+    fetchCatalog();
+    return () => { cancelled = true; };
   }, []);
 
-  return { data, isLoading };
+  return { data, isLoading, error };
 };

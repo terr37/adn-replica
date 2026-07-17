@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import 'leaflet/dist/leaflet.css';
 import { MainLayout } from "../core/components/MainLayout";
+import { AppRefreshProvider } from "../core/context/AppRefreshContext";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -29,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${ibmPlexSans.variable} ${playfairDisplay.variable} font-sans`}>
-        <MainLayout>
-          {children}
-        </MainLayout>
+        <AppRefreshProvider>
+          <MainLayout>
+            {children}
+          </MainLayout>
+        </AppRefreshProvider>
       </body>
     </html>
   );

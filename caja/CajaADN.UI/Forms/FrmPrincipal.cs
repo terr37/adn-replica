@@ -1,4 +1,4 @@
-﻿using CajaADN.Application.Services;
+using CajaADN.Application.Services;
 using CajaADN.Domain.Enums;
 using CajaADN.Domain.Enums;
 using CajaADN.Domain.Interfaces;
@@ -33,7 +33,7 @@ public class FrmPrincipal : Form
         var panel = new FlowLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(32, 96, 32, 32), FlowDirection = FlowDirection.TopDown };
 
         var btnCobro = UiTheme.BotonMenu("💵  Cobrar Tasas Municipales");
-        btnCobro.Click += (_, _) => new FrmCobro(_cobroService, _dbFactory).ShowDialog(this);
+        btnCobro.Click += (_, _) => new FrmCobro(_sesionService, _cobroService, _dbFactory).ShowDialog(this);
         panel.Controls.Add(btnCobro);
 
         var btnHistorial = UiTheme.BotonMenu("🧾  Historial / Reimprimir / Anular");

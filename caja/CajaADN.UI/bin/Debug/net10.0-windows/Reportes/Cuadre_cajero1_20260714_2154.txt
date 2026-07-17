@@ -1,0 +1,13 @@
+═══════════════════════════════
+     CUADRE DE CAJA — TURNO
+═══════════════════════════════
+Cajero:            cajero1
+Apertura:          14/07/2026 21:52
+Cierre:            14/07/2026 21:54
+Efectivo inicial:  RD$ 5,000.00
+Cobros Efectivo:   RD$ 800.00
+Cobros Tarjeta:    RD$ 0.00
+Total Cobrado:     RD$ 800.00
+Transacciones:     1 pagadas / 0 anuladas
+Efectivo esperado: RD$ 4,200.00
+═══════════════════════════════

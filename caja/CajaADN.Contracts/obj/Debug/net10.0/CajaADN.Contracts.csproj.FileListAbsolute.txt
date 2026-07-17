@@ -36,3 +36,15 @@ C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Contracts\obj\Debug\net10
 C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Contracts\obj\Debug\net10.0\refint\CajaADN.Contracts.dll
 C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.pdb
 C:\Users\UserGPC\source\repos\adn-replica\caja\CajaADN.Contracts\obj\Debug\net10.0\ref\CajaADN.Contracts.dll
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\bin\Debug\net10.0\CajaADN.Contracts.deps.json
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\bin\Debug\net10.0\CajaADN.Contracts.dll
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\bin\Debug\net10.0\CajaADN.Contracts.pdb
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.csproj.AssemblyReference.cache
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.AssemblyInfoInputs.cache
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.AssemblyInfo.cs
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.dll
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\refint\CajaADN.Contracts.dll
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\CajaADN.Contracts.pdb
+C:\Users\UserGPC\Documents\caja\CajaADN.Contracts\obj\Debug\net10.0\ref\CajaADN.Contracts.dll

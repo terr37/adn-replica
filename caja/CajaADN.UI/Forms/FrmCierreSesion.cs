@@ -1,7 +1,13 @@
-﻿using System.IO; // ← Obligatorio para guardar el archivo de reporte
+using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using CajaADN.Application.Services;
 using CajaADN.Domain.Enums;
+using CajaADN.Domain.Models;
 using CajaADN.Integration.Data;
+using CajaADN.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace CajaADN.UI.Forms;
@@ -13,7 +19,7 @@ public class FrmCierreSesion : Form
         Text = "Cierre de Turno";
         StartPosition = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
-        Size = new Size(420, 360); // Aumentado ligeramente de 320 a 360 para que quepa todo el texto nuevo
+        Size = new Size(450, 400);
         BackColor = UiTheme.FondoClaro;
 
         Controls.Add(UiTheme.CrearHeader("Resumen de Turno"));
@@ -38,7 +44,7 @@ public class FrmCierreSesion : Form
         };
         Controls.Add(btnCerrar);
 
-        // Evento Load que calcula totales y genera el reporte físico
+        // Evento Load que calcula totales, genera el reporte físico y solicita guardar en PDF
         Load += async (_, _) =>
         {
             var sesion = sesionService.SesionActual!;
@@ -50,16 +56,23 @@ public class FrmCierreSesion : Form
 
             var pagadas = transacciones.Where(t => t.Estado == EstadoPago.Pagado).ToList();
             var totalCobrado = pagadas.Sum(t => t.Monto);
+            var totalEfectivo = pagadas.Where(t => t.MetodoPago == MetodoPago.Efectivo).Sum(t => t.Monto);
+            var totalTarjeta = pagadas.Where(t => t.MetodoPago == MetodoPago.Tarjeta).Sum(t => t.Monto);
+            
             var anuladas = transacciones.Count(t => t.Estado == EstadoPago.Anulado);
             var pendientesSync = transacciones.Count(t => !t.Sincronizado);
-            var efectivoEsperado = sesion.EfectivoInicial + totalCobrado;
+            
+            // Cuando se hace un pago en efectivo, se reste de la apertura de la caja
+            var efectivoEsperado = sesion.EfectivoInicial - totalEfectivo;
 
             // 1. Mostrar el resumen extendido en la pantalla para el cajero
             lbl.Text = $"Cajero:                 {sesion.UsuarioCajero}\n" +
                        $"Efectivo inicial:       RD$ {sesion.EfectivoInicial:N2}\n" +
                        $"Transacciones cobradas: {pagadas.Count}\n" +
                        $"Transacciones anuladas: {anuladas}\n" +
-                       $"Total cobrado:          RD$ {totalCobrado:N2}\n" +
+                       $"Cobros en Efectivo:     RD$ {totalEfectivo:N2}\n" +
+                       $"Cobros en Tarjeta:      RD$ {totalTarjeta:N2}\n" +
+                       $"Total cobrado general:  RD$ {totalCobrado:N2}\n" +
                        $"Efectivo esperado:      RD$ {efectivoEsperado:N2}\n" +
                        $"Pendientes de sync:     {pendientesSync}\n\n" +
                        (pendientesSync > 0
@@ -82,7 +95,9 @@ public class FrmCierreSesion : Form
                     $"Apertura:          {sesion.FechaApertura:dd/MM/yyyy HH:mm}\n" +
                     $"Cierre:            {DateTime.Now:dd/MM/yyyy HH:mm}\n" +
                     $"Efectivo inicial:  RD$ {sesion.EfectivoInicial:N2}\n" +
-                    $"Total cobrado:     RD$ {totalCobrado:N2}\n" +
+                    $"Cobros Efectivo:   RD$ {totalEfectivo:N2}\n" +
+                    $"Cobros Tarjeta:    RD$ {totalTarjeta:N2}\n" +
+                    $"Total Cobrado:     RD$ {totalCobrado:N2}\n" +
                     $"Transacciones:     {pagadas.Count} pagadas / {anuladas} anuladas\n" +
                     $"Efectivo esperado: RD$ {efectivoEsperado:N2}\n" +
                     "═══════════════════════════════\n";
@@ -92,6 +107,53 @@ public class FrmCierreSesion : Form
             catch (Exception ex)
             {
                 MessageBox.Show($"No se pudo guardar el reporte en disco: {ex.Message}", "Error de Reporte", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // 3. Ofrecer guardar el reporte de cuadre en PDF
+            using (var sfd = new SaveFileDialog
+            {
+                Filter = "Archivos PDF (*.pdf)|*.pdf",
+                FileName = $"Cuadre_{sesion.UsuarioCajero}_{DateTime.Now:yyyyMMdd_HHmm}.pdf",
+                Title = "Guardar Cuadre de Caja en PDF"
+            })
+            {
+                if (sfd.ShowDialog(this) == DialogResult.OK)
+                {
+                    try
+                    {
+                        PdfReportService.GenerarCuadrePdf(
+                            sesion,
+                            totalEfectivo,
+                            totalTarjeta,
+                            totalCobrado,
+                            pagadas.Count,
+                            anuladas,
+                            efectivoEsperado,
+                            sfd.FileName
+                        );
+
+                        var result = MessageBox.Show(
+                            "Reporte de cuadre guardado en PDF con éxito.\n¿Desea abrirlo?",
+                            "Abrir Cuadre",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        );
+
+                        if (result == DialogResult.Yes)
+                        {
+                            var ps = new System.Diagnostics.ProcessStartInfo
+                            {
+                                FileName = sfd.FileName,
+                                UseShellExecute = true
+                            };
+                            System.Diagnostics.Process.Start(ps);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al generar el PDF del cuadre: {ex.Message}", "Error PDF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         };
     }

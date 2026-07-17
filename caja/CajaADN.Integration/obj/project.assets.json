@@ -2,6 +2,19 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "BitFaster.Caching/2.5.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BitFaster.Caching.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BitFaster.Caching.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1211,6 +1224,24 @@
           }
         }
       },
+      "NServiceBus.RabbitMQ/11.2.1": {
+        "type": "package",
+        "dependencies": {
+          "BitFaster.Caching": "[2.5.4, 3.0.0)",
+          "NServiceBus": "[10.1.4, 11.0.0)",
+          "RabbitMQ.Client": "[7.2.1, 8.0.0)"
+        },
+        "compile": {
+          "lib/net10.0/NServiceBus.Transport.RabbitMQ.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/NServiceBus.Transport.RabbitMQ.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Pipelines.Sockets.Unofficial/2.2.8": {
         "type": "package",
         "compile": {
@@ -1220,6 +1251,22 @@
         },
         "runtime": {
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RabbitMQ.Client/7.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.RateLimiting": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
             "related": ".xml"
           }
         }
@@ -1549,6 +1596,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Threading.RateLimiting/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Threading.RateLimiting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Threading.RateLimiting.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "CajaADN.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1575,6 +1638,25 @@
     }
   },
   "libraries": {
+    "BitFaster.Caching/2.5.4": {
+      "sha512": "1QroTY1PVCZOSG9FnkkCrmCKk/+bZCgI/YXq376HnYwUDJ4Ho0EaV4YaA/5v5WYLnwIwIO7RZkdWbg9pxIpueQ==",
+      "type": "package",
+      "path": "bitfaster.caching/2.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "bitfaster.caching.2.5.4.nupkg.sha512",
+        "bitfaster.caching.nuspec",
+        "lib/net6.0/BitFaster.Caching.dll",
+        "lib/net6.0/BitFaster.Caching.xml",
+        "lib/netcoreapp3.1/BitFaster.Caching.dll",
+        "lib/netcoreapp3.1/BitFaster.Caching.xml",
+        "lib/netstandard2.0/BitFaster.Caching.dll",
+        "lib/netstandard2.0/BitFaster.Caching.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -3880,6 +3962,24 @@
         "nservicebus.messageinterfaces.nuspec"
       ]
     },
+    "NServiceBus.RabbitMQ/11.2.1": {
+      "sha512": "wh7QYUY7EmBFnYM+aChHokn9fEsxFuxjg92WxngWKPYQ+9PHTlvo95+r+xTTtZmbqEVH21p6Z5j/5gB0XM5vLQ==",
+      "type": "package",
+      "path": "nservicebus.rabbitmq/11.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "NServiceBus.png",
+        "Package-README.md",
+        "_manifest/spdx_2.2/manifest.spdx.json",
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+        "lib/net10.0/NServiceBus.Transport.RabbitMQ.dll",
+        "lib/net10.0/NServiceBus.Transport.RabbitMQ.xml",
+        "nservicebus.rabbitmq.11.2.1.nupkg.sha512",
+        "nservicebus.rabbitmq.nuspec"
+      ]
+    },
     "Pipelines.Sockets.Unofficial/2.2.8": {
       "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
       "type": "package",
@@ -3901,6 +4001,23 @@
         "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
         "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
         "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/7.2.1": {
+      "sha512": "YKXEfg9fVQiTKgZlvIhAfPSFaamEgi8DsQmisCH0IAsU4FYLrtoguDrDj6JtJVGUt40QPnBLRH6fTQcAC4qsOg==",
+      "type": "package",
+      "path": "rabbitmq.client/7.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/RabbitMQ.Client.dll",
+        "lib/net8.0/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.7.2.1.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.11": {
@@ -4273,6 +4390,35 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Threading.RateLimiting/8.0.0": {
+      "sha512": "7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
+      "type": "package",
+      "path": "system.threading.ratelimiting/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Threading.RateLimiting.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Threading.RateLimiting.targets",
+        "lib/net462/System.Threading.RateLimiting.dll",
+        "lib/net462/System.Threading.RateLimiting.xml",
+        "lib/net6.0/System.Threading.RateLimiting.dll",
+        "lib/net6.0/System.Threading.RateLimiting.xml",
+        "lib/net7.0/System.Threading.RateLimiting.dll",
+        "lib/net7.0/System.Threading.RateLimiting.xml",
+        "lib/net8.0/System.Threading.RateLimiting.dll",
+        "lib/net8.0/System.Threading.RateLimiting.xml",
+        "lib/netstandard2.0/System.Threading.RateLimiting.dll",
+        "lib/netstandard2.0/System.Threading.RateLimiting.xml",
+        "system.threading.ratelimiting.8.0.0.nupkg.sha512",
+        "system.threading.ratelimiting.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "CajaADN.Contracts/1.0.0": {
       "type": "project",
       "path": "../CajaADN.Contracts/CajaADN.Contracts.csproj",
@@ -4291,6 +4437,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.9",
+      "NServiceBus.RabbitMQ >= 11.2.1",
       "StackExchange.Redis >= 2.8.24"
     ]
   },
@@ -4301,11 +4448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\CajaADN.Integration.csproj",
+      "projectUniqueName": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Integration\\CajaADN.Integration.csproj",
       "projectName": "CajaADN.Integration",
-      "projectPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\CajaADN.Integration.csproj",
+      "projectPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Integration\\CajaADN.Integration.csproj",
       "packagesPath": "C:\\Users\\UserGPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\obj\\",
+      "outputPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Integration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4327,11 +4474,11 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {
-              "projectPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj"
+            "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {
+              "projectPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj"
             },
-            "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\CajaADN.Domain.csproj": {
-              "projectPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\CajaADN.Domain.csproj"
+            "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Domain\\CajaADN.Domain.csproj": {
+              "projectPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Domain\\CajaADN.Domain.csproj"
             }
           }
         }
@@ -4371,6 +4518,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.9, )"
+          },
+          "NServiceBus.RabbitMQ": {
+            "target": "Package",
+            "version": "[11.2.1, )"
           },
           "StackExchange.Redis": {
             "target": "Package",

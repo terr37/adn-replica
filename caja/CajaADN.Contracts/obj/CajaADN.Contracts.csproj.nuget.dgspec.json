@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {}
+    "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {
+    "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
         "projectName": "CajaADN.Contracts",
-        "projectPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
+        "projectPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
         "packagesPath": "C:\\Users\\UserGPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

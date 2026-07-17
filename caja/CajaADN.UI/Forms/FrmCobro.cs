@@ -1,45 +1,69 @@
-﻿using CajaADN.Application.Services;
+using CajaADN.Application.Services;
 using CajaADN.Domain.Enums;
 using CajaADN.Domain.Models;
 using CajaADN.Integration.Data;
+using CajaADN.UI.Services;
+
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace CajaADN.UI.Forms;
 
 public class FrmCobro : Form
 {
+    private readonly SesionService _sesionService;
     private readonly CobroService _cobroService;
     private readonly IDbContextFactory<CajaDbContext> _dbFactory;
 
-    // Envuelve el enum para poder mostrar un texto legible en el ComboBox
-    // sin perder el valor real de TipoPago.
     private class OpcionTipoPago
     {
         public TipoPago Valor { get; init; }
         public string Etiqueta { get; init; } = string.Empty;
         public override string ToString() => Etiqueta;
     }
+
     private readonly RadioButton _rbEfectivo = new() { Text = "Efectivo", Checked = true, AutoSize = true };
     private readonly RadioButton _rbTarjeta = new() { Text = "Tarjeta", AutoSize = true };
-    private readonly SesionService _sesionService;
     private readonly TextBox _txtCedula = new() { Dock = DockStyle.Fill };
     private readonly ComboBox _cmbTipo = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill };
     private readonly ComboBox _cmbInmueble = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, DisplayMember = "InmuebleId" };
-    private readonly TextBox _txtReferenciaId = new() { Dock = DockStyle.Fill };
     private readonly TextBox _txtNombre = new() { Dock = DockStyle.Fill };
+    private readonly TextBox _txtDescripcion = new() { Dock = DockStyle.Fill };
     private readonly TextBox _txtMonto = new() { Dock = DockStyle.Fill };
     private readonly Button _btnCobrar = new() { Text = "Cobrar y Emitir NCF", Height = 40 };
-
-    public FrmCobro(CobroService cobroService, IDbContextFactory<CajaDbContext> dbFactory)
+    private readonly Button _btnCalcularVuelto = new()
     {
+        Text = "Calcular Vuelto",
+        Height = 40
+    };
+
+    private string _referenciaId = string.Empty;
+
+    public FrmCobro(SesionService sesionService, CobroService cobroService, IDbContextFactory<CajaDbContext> dbFactory)
+    {
+        _sesionService = sesionService;
         _cobroService = cobroService;
         _dbFactory = dbFactory;
 
         Text = "Cobro de Tasas Municipales";
         StartPosition = FormStartPosition.CenterParent;
-        Size = new Size(500, 440);
+        Size = new Size(500, 480);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
+        MaximizeBox = false;
 
-        var tlp = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, Padding = new Padding(16) };
+        var tlp = new TableLayoutPanel
+        {
+            Dock = DockStyle.Fill,
+            ColumnCount = 2,
+            RowCount = 9,
+            Padding = new Padding(16)
+        }; tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+        tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+
+        for (int i = 0; i < 9; i++)
+        {
+            tlp.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+        }
 
         var opciones = Enum.GetValues<TipoPago>()
             .Select(t => new OpcionTipoPago { Valor = t, Etiqueta = t.NombreVisible() })
@@ -48,39 +72,52 @@ public class FrmCobro : Form
         _cmbTipo.DataSource = opciones;
         _cmbTipo.DisplayMember = "Etiqueta";
         _cmbTipo.SelectedIndexChanged += (_, _) => ActualizarVisibilidadCampos();
-        tlp.Controls.Add(new Label { Text = "Tipo de pago:" }, 0, 0);
+
+        tlp.Controls.Add(new Label { Text = "Tipo de pago:", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 0);
         tlp.Controls.Add(_cmbTipo, 1, 0);
 
-        tlp.Controls.Add(new Label { Text = "Inmueble (solo Aseo):" }, 0, 1);
+        tlp.Controls.Add(new Label { Text = "Inmueble (solo Aseo):", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 1);
         _cmbInmueble.SelectedIndexChanged += (_, _) => CalcularMontoAseo();
         tlp.Controls.Add(_cmbInmueble, 1, 1);
 
-        tlp.Controls.Add(new Label { Text = "Referencia (solicitud/fosa/etc.):" }, 0, 2);
-        tlp.Controls.Add(_txtReferenciaId, 1, 2);
+        tlp.Controls.Add(new Label { Text = "Nombre contribuyente:", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 2);
+        tlp.Controls.Add(_txtNombre, 1, 2);
 
-        tlp.Controls.Add(new Label { Text = "Monto (RD$):" }, 0, 5);
+        tlp.Controls.Add(new Label { Text = "Cédula:", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 3);
+        tlp.Controls.Add(_txtCedula, 1, 3);
+
+        tlp.Controls.Add(new Label { Text = "Descripción:", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 4);
+        tlp.Controls.Add(_txtDescripcion, 1, 4);
+
+        tlp.Controls.Add(new Label { Text = "Monto (RD$):", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 5);
         tlp.Controls.Add(_txtMonto, 1, 5);
 
-        var panelMetodo = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
+        var panelMetodo = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, FlowDirection = FlowDirection.LeftToRight };
         panelMetodo.Controls.Add(_rbEfectivo);
         panelMetodo.Controls.Add(_rbTarjeta);
-        tlp.Controls.Add(new Label { Text = "Método de pago:" }, 0, 6);
+        tlp.Controls.Add(new Label { Text = "Método de pago:", Anchor = AnchorStyles.Left | AnchorStyles.Right, AutoSize = true }, 0, 6);
         tlp.Controls.Add(panelMetodo, 1, 6);
 
-        tlp.Controls.Add(new Label { Text = "Nombre contribuyente:" }, 0, 3);
-        tlp.Controls.Add(_txtNombre, 1, 3);
-
-        tlp.Controls.Add(new Label { Text = "Monto (RD$):" }, 0, 4);
-        tlp.Controls.Add(_txtMonto, 1, 4);
+        tlp.Controls.Add(_btnCalcularVuelto, 0, 7);
+        tlp.SetColumnSpan(_btnCalcularVuelto, 2);
+        _btnCalcularVuelto.Dock = DockStyle.Fill;
 
         _btnCobrar.Click += async (_, _) => await CobrarAsync();
-        tlp.Controls.Add(_btnCobrar, 0, 5);
-        tlp.Controls.Add(_btnCobrar, 0, 7);
+        tlp.Controls.Add(_btnCobrar, 0, 8);
+        tlp.SetColumnSpan(_btnCobrar, 2);
+        _btnCobrar.Dock = DockStyle.Fill;
 
-        tlp.Controls.Add(new Label { Text = "Cédula:" }, 0, 4);
-        tlp.Controls.Add(_txtCedula, 1, 4);
-        // corre los índices de fila de Monto (0,5)/(1,5) y el botón (0,6) un renglón hacia abajo
+        _btnCalcularVuelto.Click += (_, _) =>
+        {
+            if (!decimal.TryParse(_txtMonto.Text, out decimal monto))
+            {
+                MessageBox.Show("Ingrese un monto válido.");
+                return;
+            }
 
+            using var frm = new FrmCalcularVuelto(monto);
+            frm.ShowDialog(this);
+        };
         Controls.Add(tlp);
         Load += async (_, _) => await CargarCatastroAsync();
     }
@@ -99,7 +136,9 @@ public class FrmCobro : Form
         if (_cmbTipo.SelectedItem is null) return;
         var esAseo = TipoSeleccionado == TipoPago.PAGO_ASEO_URBANO;
         _cmbInmueble.Enabled = esAseo;
-        _txtMonto.Enabled = true; // siempre editable; el cálculo de Aseo es solo una sugerencia
+        _txtMonto.Enabled = true;
+        _txtMonto.Text = "0.00";
+        _referenciaId = string.Empty;
         if (esAseo) CalcularMontoAseo();
     }
 
@@ -108,8 +147,7 @@ public class FrmCobro : Form
         if (_cmbTipo.SelectedItem is null || TipoSeleccionado != TipoPago.PAGO_ASEO_URBANO) return;
         if (_cmbInmueble.SelectedItem is InmuebleCatastro inmueble)
         {
-            _txtReferenciaId.Text = inmueble.InmuebleId;
-            _txtMonto.Text = inmueble.TarifaMensual.ToString("0.00");
+            _referenciaId = inmueble.InmuebleId;
         }
     }
 
@@ -142,7 +180,16 @@ public class FrmCobro : Form
         _btnCobrar.Enabled = false;
         try
         {
-            var transaccion = await _cobroService.CobrarAsync(TipoSeleccionado, _txtReferenciaId.Text.Trim(), _txtNombre.Text.Trim(), _txtCedula.Text.Trim(), monto, metodo);
+            var transaccion = await _cobroService.CobrarAsync(
+                TipoSeleccionado, 
+                _referenciaId, 
+                _txtNombre.Text.Trim(), 
+                _txtCedula.Text.Trim(), 
+                monto, 
+                metodo,
+                _txtDescripcion.Text.Trim()
+            );
+
             await using (var db = await _dbFactory.CreateDbContextAsync())
             {
                 db.Transacciones.Add(transaccion);
@@ -150,6 +197,58 @@ public class FrmCobro : Form
             }
 
             GenerarRecibo(transaccion, _sesionService.SesionActual!.UsuarioCajero);
+
+            // Generar el PDF local en la carpeta Recibos
+            var carpetaRecibos = Path.Combine(AppContext.BaseDirectory, "Recibos");
+            Directory.CreateDirectory(carpetaRecibos);
+            var rutaPdfLocal = Path.Combine(carpetaRecibos, $"{transaccion.NcfSimulado}.pdf");
+
+            try
+            {
+                PdfReportService.GenerarReciboPdf(transaccion, _sesionService.SesionActual!.UsuarioCajero, rutaPdfLocal);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al generar el PDF local del recibo: {ex.Message}", "Error PDF", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // Preguntar si desea guardar el PDF en el equipo
+            using (var sfd = new SaveFileDialog
+            {
+                Filter = "Archivos PDF (*.pdf)|*.pdf",
+                FileName = $"{transaccion.NcfSimulado}.pdf",
+                Title = "Guardar Factura en PDF"
+            })
+            {
+                if (sfd.ShowDialog(this) == DialogResult.OK)
+                {
+                    try
+                    {
+                        File.Copy(rutaPdfLocal, sfd.FileName, true);
+
+                        var result = MessageBox.Show(
+                            "Factura guardada en PDF con éxito.\n¿Desea abrirla para imprimirla?", 
+                            "Imprimir Factura", 
+                            MessageBoxButtons.YesNo, 
+                            MessageBoxIcon.Question
+                        );
+
+                        if (result == DialogResult.Yes)
+                        {
+                            var ps = new System.Diagnostics.ProcessStartInfo
+                            {
+                                FileName = sfd.FileName,
+                                UseShellExecute = true
+                            };
+                            System.Diagnostics.Process.Start(ps);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar el PDF en la ubicación seleccionada: {ex.Message}", "Error Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
 
             MessageBox.Show(
                 $"COBRADO ✔\n\nServicio: {TipoSeleccionado.NombreVisible()}\nNCF: {transaccion.NcfSimulado}\nMonto: RD$ {transaccion.Monto:N2}\n\n" +
@@ -163,6 +262,7 @@ public class FrmCobro : Form
             _btnCobrar.Enabled = true;
         }
     }
+
     private static void GenerarRecibo(Transaccion t, string cajero)
     {
         var carpeta = Path.Combine(AppContext.BaseDirectory, "Recibos");
@@ -179,7 +279,7 @@ public class FrmCobro : Form
             $"Contribuyente:  {t.NombreContribuyente}\n" +
             $"Cédula:         {t.Cedula}\n" +
             $"Tipo de pago:   {t.Tipo}\n" +
-            $"Referencia:     {t.ReferenciaId}\n" +
+            $"Descripción:    {t.Descripcion}\n" +
             $"Monto:          RD$ {t.Monto:N2}\n" +
             "═══════════════════════════════\n";
 

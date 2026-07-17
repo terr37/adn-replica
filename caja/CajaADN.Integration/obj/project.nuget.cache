@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "C1KR6nr8LkM=",
+  "dgSpecHash": "CuY3kJO9ifY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Integration\\CajaADN.Integration.csproj",
+  "projectFilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Integration\\CajaADN.Integration.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\UserGPC\\.nuget\\packages\\bitfaster.caching\\2.5.4\\bitfaster.caching.2.5.4.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
@@ -56,7 +57,9 @@
     "C:\\Users\\UserGPC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus\\10.2.7\\nservicebus.10.2.7.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.messageinterfaces\\1.0.0\\nservicebus.messageinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\nservicebus.rabbitmq\\11.2.1\\nservicebus.rabbitmq.11.2.1.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\rabbitmq.client\\7.2.1\\rabbitmq.client.7.2.1.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
@@ -70,7 +73,8 @@
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.9\\system.diagnostics.eventlog.10.0.9.nupkg.sha512",
-    "C:\\Users\\UserGPC\\.nuget\\packages\\system.io.hashing\\10.0.9\\system.io.hashing.10.0.9.nupkg.sha512"
+    "C:\\Users\\UserGPC\\.nuget\\packages\\system.io.hashing\\10.0.9\\system.io.hashing.10.0.9.nupkg.sha512",
+    "C:\\Users\\UserGPC\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,4 @@
-﻿using CajaADN.Domain.Enums;
+using CajaADN.Domain.Enums;
 
 namespace CajaADN.Domain.Models;
 
@@ -21,4 +21,5 @@ public class Transaccion
 
     public string Cedula { get; set; } = string.Empty;   // ← nuevo
     public MetodoPago MetodoPago { get; set; } = MetodoPago.Efectivo;
+    public string Descripcion { get; set; } = string.Empty;
 }

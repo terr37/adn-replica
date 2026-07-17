@@ -1,4 +1,4 @@
-﻿using CajaADN.Domain.Enums;
+using CajaADN.Domain.Enums;
 using CajaADN.Domain.Interfaces;
 using CajaADN.Domain.Models;
 
@@ -21,7 +21,7 @@ public class CobroService
     private static int _consecutivoNcf = 100;
     private static string GenerarNcfSimulado() => $"B02{System.Threading.Interlocked.Increment(ref _consecutivoNcf):D8}";
 
-    public Task<Transaccion> CobrarAsync(TipoPago tipo, string referenciaId, string nombreContribuyente, string cedula, decimal monto, MetodoPago metodoPago)
+    public Task<Transaccion> CobrarAsync(TipoPago tipo, string referenciaId, string nombreContribuyente, string cedula, decimal monto, MetodoPago metodoPago, string descripcion)
     {
         var sesion = _sesionService.SesionActual ?? throw new InvalidOperationException("No hay sesión abierta.");
 
@@ -36,6 +36,7 @@ public class CobroService
             Monto = monto,
             NcfSimulado = GenerarNcfSimulado(),
             TimestampLocal = DateTimeOffset.Now,
+            Descripcion = descripcion
         };
 
         sesion.Transacciones.Add(transaccion);

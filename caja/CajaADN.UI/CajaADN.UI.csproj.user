@@ -4,6 +4,9 @@
     <Compile Update="Forms\FrmAperturaSesion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\FrmCalcularVuelto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\FrmCierreSesion.cs">
       <SubType>Form</SubType>
     </Compile>

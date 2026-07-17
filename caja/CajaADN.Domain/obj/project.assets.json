@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\CajaADN.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Domain\\CajaADN.Domain.csproj",
       "projectName": "CajaADN.Domain",
-      "projectPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\CajaADN.Domain.csproj",
+      "projectPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Domain\\CajaADN.Domain.csproj",
       "packagesPath": "C:\\Users\\UserGPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Domain\\obj\\",
+      "outputPath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

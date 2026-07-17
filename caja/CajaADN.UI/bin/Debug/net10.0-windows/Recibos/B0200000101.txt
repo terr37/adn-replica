@@ -1,0 +1,12 @@
+═══════════════════════════════
+  ALCALDÍA DEL DISTRITO NACIONAL
+═══════════════════════════════
+NCF:            B0200000101
+Fecha:          17/07/2026 10:17
+Cajero:         cajero1
+Contribuyente:  jaden
+Cédula:         256457234
+Tipo de pago:   PAGO_ASEO_URBANO
+Descripción:    aseo
+Monto:          RD$ 500.00
+═══════════════════════════════

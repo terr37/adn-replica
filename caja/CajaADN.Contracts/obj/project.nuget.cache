@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hOIMPMVP3aQ=",
+  "dgSpecHash": "KERgKDODCqI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\UserGPC\\source\\repos\\adn-replica\\caja\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
+  "projectFilePath": "C:\\Users\\UserGPC\\Documents\\Tarea de la universidad\\CajaADN.UI\\CajaADN.Contracts\\CajaADN.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.9\\microsoft.extensions.configuration.10.0.9.nupkg.sha512",
     "C:\\Users\\UserGPC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.9\\microsoft.extensions.configuration.abstractions.10.0.9.nupkg.sha512",
